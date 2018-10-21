@@ -1,0 +1,2371 @@
+2018-10-05 11:08:34.306029: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2018-10-05 11:08:34.525581: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-10-05 11:08:34.526094: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-10-05 11:08:34.526125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+/usr/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py:96: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+Cannot run vis during test due to the unavailability of matplotlib
+Loading dataset rgz_2017_trainD1
+Loading dataset rgz_2017_testD1
+Loading dataset rgz_2017_trainD3
+Loading dataset rgz_2017_testD3
+Loading dataset rgz_2017_trainD4
+Loading dataset rgz_2017_testD4
+Loading dataset rgz_2017_trainD5
+Loading dataset rgz_2017_testD5
+Loading dataset rgz_2017_allD1
+Loading dataset rgz_2017_emu
+Loading dataset rgz_2017_trainD1_264
+Loading dataset rgz_2017_testD1_264
+Loading dataset rgz_2017_trainD3_264
+Loading dataset rgz_2017_testD3_264
+Loading dataset rgz_2017_trainD4_264
+Loading dataset rgz_2017_testD4_264
+Loading dataset rgz_2017_D1_10k
+Loading dataset rgz_2017_D1_20k
+Loading dataset rgz_2017_D1_30k
+Loading dataset rgz_2017_D1_40k
+Loading dataset rgz_2017_D1_50k
+Loading dataset rgz_2017_D1_60k
+Loading dataset rgz_2017_D1_70k
+Loading dataset rgz_2017_D1_80k
+Loading dataset rgz_2017_D3_10k
+Loading dataset rgz_2017_D3_20k
+Loading dataset rgz_2017_D3_30k
+Loading dataset rgz_2017_D3_40k
+Loading dataset rgz_2017_D3_50k
+Loading dataset rgz_2017_D3_60k
+Loading dataset rgz_2017_D3_70k
+Loading dataset rgz_2017_D3_80k
+Loading dataset rgz_2017_D4_10k
+Loading dataset rgz_2017_D4_20k
+Loading dataset rgz_2017_D4_30k
+Loading dataset rgz_2017_D4_40k
+Loading dataset rgz_2017_D4_50k
+Loading dataset rgz_2017_D4_60k
+Loading dataset rgz_2017_D4_70k
+Loading dataset rgz_2017_D4_80k
+Loading dataset rgz_2017_lc_D1_1023
+Loading dataset rgz_2017_lc_D1_2046
+Loading dataset rgz_2017_lc_D1_3069
+Loading dataset rgz_2017_lc_D1_4092
+Loading dataset rgz_2017_lc_D1_5115
+Loading dataset rgz_2017_lc_D1_6138
+Loading dataset rgz_2017_lc_D3_1023
+Loading dataset rgz_2017_lc_D3_2046
+Loading dataset rgz_2017_lc_D3_3069
+Loading dataset rgz_2017_lc_D3_4092
+Loading dataset rgz_2017_lc_D3_5115
+Loading dataset rgz_2017_lc_D3_6138
+Loading dataset rgz_2017_lc_D4_1023
+Loading dataset rgz_2017_lc_D4_2046
+Loading dataset rgz_2017_lc_D4_3069
+Loading dataset rgz_2017_lc_D4_4092
+Loading dataset rgz_2017_lc_D4_5115
+Loading dataset rgz_2017_lc_D4_6138
+Loading dataset rgz_2017_lc_D1_1023_val
+Loading dataset rgz_2017_lc_D1_2046_val
+Loading dataset rgz_2017_lc_D1_3069_val
+Loading dataset rgz_2017_lc_D1_4092_val
+Loading dataset rgz_2017_lc_D1_5115_val
+Loading dataset rgz_2017_lc_D1_6138_val
+Loading dataset rgz_2017_lc_D3_1023_val
+Loading dataset rgz_2017_lc_D3_2046_val
+Loading dataset rgz_2017_lc_D3_3069_val
+Loading dataset rgz_2017_lc_D3_4092_val
+Loading dataset rgz_2017_lc_D3_5115_val
+Loading dataset rgz_2017_lc_D3_6138_val
+Loading dataset rgz_2017_lc_D4_1023_val
+Loading dataset rgz_2017_lc_D4_2046_val
+Loading dataset rgz_2017_lc_D4_3069_val
+Loading dataset rgz_2017_lc_D4_4092_val
+Loading dataset rgz_2017_lc_D4_5115_val
+Loading dataset rgz_2017_lc_D4_6138_val
+Loading dataset rgz_2017_3c_D1_132
+Loading dataset rgz_2017_3c_D1_264
+Loading dataset rgz_2017_3c_D1_600
+Loading dataset rgz_2017_3c_D3_132
+Loading dataset rgz_2017_3c_D3_264
+Loading dataset rgz_2017_3c_D3_600
+Loading dataset rgz_2017_3c_D4_132
+Loading dataset rgz_2017_3c_D4_264
+Loading dataset rgz_2017_3c_D4_600
+Called with args:
+Namespace(cfg_file='/home/yuno/intern/rgz_rcnn/experiments/cfgs/faster_rcnn_end2end.yml', device='gpu', device_id=0, imdb_name='rgz_2017_lc_D4_1023_val', learning_rate=0.0, max_iters=9220, network_name='rgz_train', pretrained_model='/home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023/VGGnet_fast_rcnn-80000', randomize=False, set_cfgs=None, solver=None, start_iter=0)
+Using config:
+{'DATA_DIR': '/home/yuno/intern/rgz_rcnn/data',
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXP_DIR': 'faster_rcnn_end2end',
+ 'GPU_ID': 0,
+ 'IS_MULTISCALE': False,
+ 'MATLAB': 'matlab',
+ 'MODELS_DIR': '/home/yuno/intern/rgz_rcnn/models/pascal_voc',
+ 'PIXEL_MEANS': array([[[103.939, 116.779, 123.68 ]]]),
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/home/yuno/intern/rgz_rcnn',
+ 'TEST': {'BBOX_REG': True,
+          'DEBUG_TIMELINE': False,
+          'HAS_RPN': True,
+          'MAX_SIZE': 1000,
+          'NMS': 0.3,
+          'PROPOSAL_METHOD': 'selective_search',
+          'RPN_MIN_SIZE': 4,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 5,
+          'RPN_PRE_NMS_TOP_N': 6000,
+          'SCALES': [600],
+          'SVM': False},
+ 'TRAIN': {'ASPECT_GROUPING': True,
+           'BATCH_SIZE': 128,
+           'BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+           'BBOX_REG': True,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'DEBUG_TIMELINE': False,
+           'DISPLAY': 10,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'GAMMA': 0.1,
+           'HAS_RPN': True,
+           'IMS_PER_BATCH': 1,
+           'LEARNING_RATE': 0.001,
+           'MAX_SIZE': 1000,
+           'MOMENTUM': 0.9,
+           'PROPOSAL_METHOD': 'gt',
+           'RPN_BATCHSIZE': 256,
+           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 4,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 12000,
+           'SCALES': [600],
+           'SNAPSHOT_INFIX': '',
+           'SNAPSHOT_ITERS': 10000,
+           'SNAPSHOT_PREFIX': 'VGGnet_fast_rcnn',
+           'STEPSIZE': 50000,
+           'USE_FLIPPED': True,
+           'USE_PREFETCH': False},
+ 'USE_GPU_NMS': True}
+<bound method rgz.default_roidb of <datasets.rgz.rgz object at 0x65d3dd0>>
+Loaded dataset `rgz_2017_lc_D4_1023_val` for training
+Appending horizontally-flipped training examples...
+rgz_2017_lc_D4_1023_val gt roidb loaded from /home/yuno/intern/rgz_rcnn/data/cache/rgz_2017_lc_D4_1023_val_gt_roidb.pkl
+done
+Preparing training data...
+done
+Output will be saved to `/home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023_val`
+/gpu:0
+Use network `rgz_train` in training
+Filtered 0 roidb entries: 9206 -> 9206
+Computing bounding-box regression targets...
+bbox target means:
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[0. 0. 0. 0.]
+bbox target stdevs:
+[[0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]
+ [0.1 0.1 0.2 0.2]]
+[0.1 0.1 0.2 0.2]
+Normalizing targets
+done
+Solving...
+Loading pretrained model weights from /home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023/VGGnet_fast_rcnn-80000
+iter: 10 / 9220, total loss: 0.4383, rpn_loss_cls: 0.0062, rpn_loss_box: 0.0072, loss_cls: 0.3295, loss_box: 0.0954, lr: 0.001000
+speed: 0.262s / iter.
+iter: 20 / 9220, total loss: 0.1627, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0005, loss_cls: 0.0305, loss_box: 0.1302, lr: 0.001000
+speed: 0.184s / iter.
+iter: 30 / 9220, total loss: 0.1016, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0004, loss_cls: 0.0097, loss_box: 0.0911, lr: 0.001000
+speed: 0.158s / iter.
+iter: 40 / 9220, total loss: 0.2513, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0007, loss_cls: 0.1658, loss_box: 0.0835, lr: 0.001000
+speed: 0.145s / iter.
+iter: 50 / 9220, total loss: 0.3998, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0021, loss_cls: 0.2614, loss_box: 0.1329, lr: 0.001000
+speed: 0.138s / iter.
+iter: 60 / 9220, total loss: 0.2286, rpn_loss_cls: 0.0405, rpn_loss_box: 0.0023, loss_cls: 0.0335, loss_box: 0.1522, lr: 0.001000
+speed: 0.133s / iter.
+iter: 70 / 9220, total loss: 0.2594, rpn_loss_cls: 0.0214, rpn_loss_box: 0.0005, loss_cls: 0.1485, loss_box: 0.0891, lr: 0.001000
+speed: 0.129s / iter.
+iter: 80 / 9220, total loss: 0.1823, rpn_loss_cls: 0.0298, rpn_loss_box: 0.0024, loss_cls: 0.0182, loss_box: 0.1319, lr: 0.001000
+speed: 0.126s / iter.
+iter: 90 / 9220, total loss: 0.2162, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0018, loss_cls: 0.1050, loss_box: 0.1091, lr: 0.001000
+speed: 0.124s / iter.
+iter: 100 / 9220, total loss: 0.0622, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0004, loss_cls: 0.0142, loss_box: 0.0475, lr: 0.001000
+speed: 0.122s / iter.
+iter: 110 / 9220, total loss: 0.2211, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0002, loss_cls: 0.1583, loss_box: 0.0619, lr: 0.001000
+speed: 0.121s / iter.
+iter: 120 / 9220, total loss: 0.4541, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0016, loss_cls: 0.3360, loss_box: 0.1158, lr: 0.001000
+speed: 0.120s / iter.
+iter: 130 / 9220, total loss: 0.3996, rpn_loss_cls: 0.0600, rpn_loss_box: 0.0007, loss_cls: 0.1655, loss_box: 0.1733, lr: 0.001000
+speed: 0.119s / iter.
+iter: 140 / 9220, total loss: 0.3391, rpn_loss_cls: 0.0046, rpn_loss_box: 0.0015, loss_cls: 0.2793, loss_box: 0.0537, lr: 0.001000
+speed: 0.118s / iter.
+iter: 150 / 9220, total loss: 0.4353, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0032, loss_cls: 0.3084, loss_box: 0.1218, lr: 0.001000
+speed: 0.117s / iter.
+iter: 160 / 9220, total loss: 0.0835, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0004, loss_cls: 0.0279, loss_box: 0.0532, lr: 0.001000
+speed: 0.116s / iter.
+iter: 170 / 9220, total loss: 0.2788, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0063, loss_cls: 0.1658, loss_box: 0.1049, lr: 0.001000
+speed: 0.116s / iter.
+iter: 180 / 9220, total loss: 0.6036, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0045, loss_cls: 0.4610, loss_box: 0.1347, lr: 0.001000
+speed: 0.115s / iter.
+iter: 190 / 9220, total loss: 0.2660, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0051, loss_cls: 0.1745, loss_box: 0.0851, lr: 0.001000
+speed: 0.115s / iter.
+iter: 200 / 9220, total loss: 0.0854, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0025, loss_cls: 0.0405, loss_box: 0.0422, lr: 0.001000
+speed: 0.115s / iter.
+iter: 210 / 9220, total loss: 0.7724, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0056, loss_cls: 0.6236, loss_box: 0.1413, lr: 0.001000
+speed: 0.114s / iter.
+iter: 220 / 9220, total loss: 0.2297, rpn_loss_cls: 0.0254, rpn_loss_box: 0.0065, loss_cls: 0.0997, loss_box: 0.0982, lr: 0.001000
+speed: 0.114s / iter.
+iter: 230 / 9220, total loss: 0.3342, rpn_loss_cls: 0.0307, rpn_loss_box: 0.0015, loss_cls: 0.2204, loss_box: 0.0816, lr: 0.001000
+speed: 0.114s / iter.
+iter: 240 / 9220, total loss: 0.7053, rpn_loss_cls: 0.0255, rpn_loss_box: 0.0010, loss_cls: 0.5125, loss_box: 0.1663, lr: 0.001000
+speed: 0.113s / iter.
+iter: 250 / 9220, total loss: 0.2104, rpn_loss_cls: 0.0479, rpn_loss_box: 0.0004, loss_cls: 0.0434, loss_box: 0.1187, lr: 0.001000
+speed: 0.113s / iter.
+iter: 260 / 9220, total loss: 0.9158, rpn_loss_cls: 0.0110, rpn_loss_box: 0.0522, loss_cls: 0.6463, loss_box: 0.2064, lr: 0.001000
+speed: 0.113s / iter.
+iter: 270 / 9220, total loss: 0.7509, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0072, loss_cls: 0.6753, loss_box: 0.0683, lr: 0.001000
+speed: 0.113s / iter.
+iter: 280 / 9220, total loss: 0.3720, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0010, loss_cls: 0.2879, loss_box: 0.0831, lr: 0.001000
+speed: 0.112s / iter.
+iter: 290 / 9220, total loss: 0.1539, rpn_loss_cls: 0.0154, rpn_loss_box: 0.0004, loss_cls: 0.0936, loss_box: 0.0446, lr: 0.001000
+speed: 0.112s / iter.
+iter: 300 / 9220, total loss: 0.1317, rpn_loss_cls: 0.0163, rpn_loss_box: 0.0046, loss_cls: 0.0516, loss_box: 0.0592, lr: 0.001000
+speed: 0.112s / iter.
+iter: 310 / 9220, total loss: 0.2030, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0011, loss_cls: 0.1439, loss_box: 0.0579, lr: 0.001000
+speed: 0.112s / iter.
+iter: 320 / 9220, total loss: 0.1975, rpn_loss_cls: 0.0012, rpn_loss_box: 0.0001, loss_cls: 0.0747, loss_box: 0.1215, lr: 0.001000
+speed: 0.112s / iter.
+iter: 330 / 9220, total loss: 0.4426, rpn_loss_cls: 0.0139, rpn_loss_box: 0.0025, loss_cls: 0.2226, loss_box: 0.2036, lr: 0.001000
+speed: 0.112s / iter.
+iter: 340 / 9220, total loss: 0.2760, rpn_loss_cls: 0.0074, rpn_loss_box: 0.0070, loss_cls: 0.1590, loss_box: 0.1025, lr: 0.001000
+speed: 0.111s / iter.
+iter: 350 / 9220, total loss: 0.2603, rpn_loss_cls: 0.0706, rpn_loss_box: 0.0010, loss_cls: 0.0912, loss_box: 0.0975, lr: 0.001000
+speed: 0.111s / iter.
+iter: 360 / 9220, total loss: 0.2137, rpn_loss_cls: 0.0079, rpn_loss_box: 0.0046, loss_cls: 0.1441, loss_box: 0.0572, lr: 0.001000
+speed: 0.111s / iter.
+iter: 370 / 9220, total loss: 0.1410, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0015, loss_cls: 0.0641, loss_box: 0.0729, lr: 0.001000
+speed: 0.111s / iter.
+iter: 380 / 9220, total loss: 0.4059, rpn_loss_cls: 0.0134, rpn_loss_box: 0.0162, loss_cls: 0.2670, loss_box: 0.1092, lr: 0.001000
+speed: 0.111s / iter.
+iter: 390 / 9220, total loss: 0.4221, rpn_loss_cls: 0.0472, rpn_loss_box: 0.0093, loss_cls: 0.2977, loss_box: 0.0679, lr: 0.001000
+speed: 0.111s / iter.
+iter: 400 / 9220, total loss: 0.0632, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0148, loss_box: 0.0479, lr: 0.001000
+speed: 0.111s / iter.
+iter: 410 / 9220, total loss: 0.0930, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0031, loss_cls: 0.0421, loss_box: 0.0477, lr: 0.001000
+speed: 0.111s / iter.
+iter: 420 / 9220, total loss: 0.0429, rpn_loss_cls: 0.0068, rpn_loss_box: 0.0006, loss_cls: 0.0035, loss_box: 0.0320, lr: 0.001000
+speed: 0.111s / iter.
+iter: 430 / 9220, total loss: 0.2212, rpn_loss_cls: 0.0225, rpn_loss_box: 0.0039, loss_cls: 0.1566, loss_box: 0.0382, lr: 0.001000
+speed: 0.111s / iter.
+iter: 440 / 9220, total loss: 0.1659, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0019, loss_cls: 0.0474, loss_box: 0.1158, lr: 0.001000
+speed: 0.111s / iter.
+iter: 450 / 9220, total loss: 0.1454, rpn_loss_cls: 0.0098, rpn_loss_box: 0.0020, loss_cls: 0.0713, loss_box: 0.0623, lr: 0.001000
+speed: 0.111s / iter.
+iter: 460 / 9220, total loss: 0.1981, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0018, loss_cls: 0.1195, loss_box: 0.0764, lr: 0.001000
+speed: 0.110s / iter.
+iter: 470 / 9220, total loss: 0.1372, rpn_loss_cls: 0.0073, rpn_loss_box: 0.0023, loss_cls: 0.0751, loss_box: 0.0525, lr: 0.001000
+speed: 0.110s / iter.
+iter: 480 / 9220, total loss: 0.2884, rpn_loss_cls: 0.0288, rpn_loss_box: 0.0057, loss_cls: 0.1292, loss_box: 0.1246, lr: 0.001000
+speed: 0.110s / iter.
+iter: 490 / 9220, total loss: 0.2916, rpn_loss_cls: 0.0105, rpn_loss_box: 0.0007, loss_cls: 0.2250, loss_box: 0.0554, lr: 0.001000
+speed: 0.110s / iter.
+iter: 500 / 9220, total loss: 0.0134, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0030, loss_box: 0.0100, lr: 0.001000
+speed: 0.110s / iter.
+iter: 510 / 9220, total loss: 0.2429, rpn_loss_cls: 0.0707, rpn_loss_box: 0.0079, loss_cls: 0.0530, loss_box: 0.1113, lr: 0.001000
+speed: 0.110s / iter.
+iter: 520 / 9220, total loss: 0.3268, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0014, loss_cls: 0.2804, loss_box: 0.0451, lr: 0.001000
+speed: 0.110s / iter.
+iter: 530 / 9220, total loss: 0.2590, rpn_loss_cls: 0.0061, rpn_loss_box: 0.0007, loss_cls: 0.1479, loss_box: 0.1043, lr: 0.001000
+speed: 0.110s / iter.
+iter: 540 / 9220, total loss: 0.1093, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0019, loss_cls: 0.0962, loss_box: 0.0083, lr: 0.001000
+speed: 0.110s / iter.
+iter: 550 / 9220, total loss: 0.1508, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0013, loss_cls: 0.1152, loss_box: 0.0340, lr: 0.001000
+speed: 0.110s / iter.
+iter: 560 / 9220, total loss: 0.2305, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0001, loss_cls: 0.2081, loss_box: 0.0219, lr: 0.001000
+speed: 0.110s / iter.
+iter: 570 / 9220, total loss: 0.1413, rpn_loss_cls: 0.0116, rpn_loss_box: 0.0227, loss_cls: 0.0328, loss_box: 0.0743, lr: 0.001000
+speed: 0.110s / iter.
+iter: 580 / 9220, total loss: 0.0158, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0008, loss_cls: 0.0023, loss_box: 0.0127, lr: 0.001000
+speed: 0.110s / iter.
+iter: 590 / 9220, total loss: 0.0408, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0006, loss_cls: 0.0279, loss_box: 0.0123, lr: 0.001000
+speed: 0.110s / iter.
+iter: 600 / 9220, total loss: 0.1894, rpn_loss_cls: 0.0056, rpn_loss_box: 0.0018, loss_cls: 0.0920, loss_box: 0.0899, lr: 0.001000
+speed: 0.110s / iter.
+iter: 610 / 9220, total loss: 0.4000, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.3657, loss_box: 0.0339, lr: 0.001000
+speed: 0.110s / iter.
+iter: 620 / 9220, total loss: 0.0597, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0337, loss_box: 0.0257, lr: 0.001000
+speed: 0.110s / iter.
+iter: 630 / 9220, total loss: 0.1645, rpn_loss_cls: 0.0332, rpn_loss_box: 0.0009, loss_cls: 0.0843, loss_box: 0.0461, lr: 0.001000
+speed: 0.110s / iter.
+iter: 640 / 9220, total loss: 0.2951, rpn_loss_cls: 0.0425, rpn_loss_box: 0.0048, loss_cls: 0.1905, loss_box: 0.0574, lr: 0.001000
+speed: 0.110s / iter.
+iter: 650 / 9220, total loss: 0.1713, rpn_loss_cls: 0.0109, rpn_loss_box: 0.0318, loss_cls: 0.0733, loss_box: 0.0553, lr: 0.001000
+speed: 0.110s / iter.
+iter: 660 / 9220, total loss: 0.0832, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0578, loss_box: 0.0251, lr: 0.001000
+speed: 0.110s / iter.
+iter: 670 / 9220, total loss: 0.5494, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0010, loss_cls: 0.4991, loss_box: 0.0484, lr: 0.001000
+speed: 0.109s / iter.
+iter: 680 / 9220, total loss: 0.3143, rpn_loss_cls: 0.1150, rpn_loss_box: 0.0037, loss_cls: 0.0483, loss_box: 0.1474, lr: 0.001000
+speed: 0.109s / iter.
+iter: 690 / 9220, total loss: 0.0974, rpn_loss_cls: 0.0056, rpn_loss_box: 0.0003, loss_cls: 0.0642, loss_box: 0.0273, lr: 0.001000
+speed: 0.109s / iter.
+iter: 700 / 9220, total loss: 0.5862, rpn_loss_cls: 0.0605, rpn_loss_box: 0.0607, loss_cls: 0.2389, loss_box: 0.2261, lr: 0.001000
+speed: 0.109s / iter.
+iter: 710 / 9220, total loss: 0.0559, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0020, loss_cls: 0.0125, loss_box: 0.0413, lr: 0.001000
+speed: 0.109s / iter.
+iter: 720 / 9220, total loss: 0.0895, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0554, loss_box: 0.0335, lr: 0.001000
+speed: 0.109s / iter.
+iter: 730 / 9220, total loss: 0.0987, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0018, loss_cls: 0.0756, loss_box: 0.0208, lr: 0.001000
+speed: 0.109s / iter.
+iter: 740 / 9220, total loss: 0.1695, rpn_loss_cls: 0.0093, rpn_loss_box: 0.0006, loss_cls: 0.1328, loss_box: 0.0268, lr: 0.001000
+speed: 0.109s / iter.
+iter: 750 / 9220, total loss: 0.0195, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0020, loss_box: 0.0171, lr: 0.001000
+speed: 0.109s / iter.
+iter: 760 / 9220, total loss: 0.2880, rpn_loss_cls: 0.0267, rpn_loss_box: 0.0015, loss_cls: 0.1723, loss_box: 0.0875, lr: 0.001000
+speed: 0.109s / iter.
+iter: 770 / 9220, total loss: 0.0710, rpn_loss_cls: 0.0041, rpn_loss_box: 0.0204, loss_cls: 0.0259, loss_box: 0.0206, lr: 0.001000
+speed: 0.109s / iter.
+iter: 780 / 9220, total loss: 0.0771, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0007, loss_cls: 0.0324, loss_box: 0.0431, lr: 0.001000
+speed: 0.109s / iter.
+iter: 790 / 9220, total loss: 0.2426, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0013, loss_cls: 0.1953, loss_box: 0.0457, lr: 0.001000
+speed: 0.109s / iter.
+iter: 800 / 9220, total loss: 0.3249, rpn_loss_cls: 0.0063, rpn_loss_box: 0.0055, loss_cls: 0.2493, loss_box: 0.0638, lr: 0.001000
+speed: 0.109s / iter.
+iter: 810 / 9220, total loss: 0.1236, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0090, loss_cls: 0.0725, loss_box: 0.0417, lr: 0.001000
+speed: 0.109s / iter.
+iter: 820 / 9220, total loss: 0.0640, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0430, loss_box: 0.0204, lr: 0.001000
+speed: 0.109s / iter.
+iter: 830 / 9220, total loss: 0.1505, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0015, loss_cls: 0.1173, loss_box: 0.0291, lr: 0.001000
+speed: 0.109s / iter.
+iter: 840 / 9220, total loss: 0.1102, rpn_loss_cls: 0.0188, rpn_loss_box: 0.0162, loss_cls: 0.0135, loss_box: 0.0616, lr: 0.001000
+speed: 0.109s / iter.
+iter: 850 / 9220, total loss: 0.3444, rpn_loss_cls: 0.0156, rpn_loss_box: 0.0004, loss_cls: 0.1895, loss_box: 0.1389, lr: 0.001000
+speed: 0.109s / iter.
+iter: 860 / 9220, total loss: 0.0234, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0045, loss_box: 0.0185, lr: 0.001000
+speed: 0.109s / iter.
+iter: 870 / 9220, total loss: 0.1193, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0008, loss_cls: 0.0871, loss_box: 0.0297, lr: 0.001000
+speed: 0.109s / iter.
+iter: 880 / 9220, total loss: 0.4673, rpn_loss_cls: 0.0126, rpn_loss_box: 0.1139, loss_cls: 0.3048, loss_box: 0.0361, lr: 0.001000
+speed: 0.109s / iter.
+iter: 890 / 9220, total loss: 0.0634, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0007, loss_cls: 0.0291, loss_box: 0.0336, lr: 0.001000
+speed: 0.109s / iter.
+iter: 900 / 9220, total loss: 0.4447, rpn_loss_cls: 0.0308, rpn_loss_box: 0.0062, loss_cls: 0.2573, loss_box: 0.1505, lr: 0.001000
+speed: 0.109s / iter.
+iter: 910 / 9220, total loss: 0.8905, rpn_loss_cls: 0.4747, rpn_loss_box: 0.0250, loss_cls: 0.2966, loss_box: 0.0941, lr: 0.001000
+speed: 0.109s / iter.
+iter: 920 / 9220, total loss: 0.3352, rpn_loss_cls: 0.0370, rpn_loss_box: 0.0225, loss_cls: 0.0684, loss_box: 0.2073, lr: 0.001000
+speed: 0.109s / iter.
+iter: 930 / 9220, total loss: 0.0641, rpn_loss_cls: 0.0022, rpn_loss_box: 0.0007, loss_cls: 0.0392, loss_box: 0.0220, lr: 0.001000
+speed: 0.109s / iter.
+iter: 940 / 9220, total loss: 0.2356, rpn_loss_cls: 0.0062, rpn_loss_box: 0.0091, loss_cls: 0.2109, loss_box: 0.0093, lr: 0.001000
+speed: 0.109s / iter.
+iter: 950 / 9220, total loss: 0.0428, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0167, loss_box: 0.0259, lr: 0.001000
+speed: 0.109s / iter.
+iter: 960 / 9220, total loss: 0.2095, rpn_loss_cls: 0.0064, rpn_loss_box: 0.0036, loss_cls: 0.0848, loss_box: 0.1147, lr: 0.001000
+speed: 0.109s / iter.
+iter: 970 / 9220, total loss: 0.0194, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0021, loss_box: 0.0171, lr: 0.001000
+speed: 0.109s / iter.
+iter: 980 / 9220, total loss: 0.0211, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0054, loss_box: 0.0150, lr: 0.001000
+speed: 0.109s / iter.
+iter: 990 / 9220, total loss: 0.1479, rpn_loss_cls: 0.0175, rpn_loss_box: 0.0049, loss_cls: 0.0596, loss_box: 0.0659, lr: 0.001000
+speed: 0.109s / iter.
+iter: 1000 / 9220, total loss: 0.2441, rpn_loss_cls: 0.0061, rpn_loss_box: 0.0102, loss_cls: 0.1942, loss_box: 0.0336, lr: 0.001000
+speed: 0.109s / iter.
+iter: 1010 / 9220, total loss: 0.0953, rpn_loss_cls: 0.0101, rpn_loss_box: 0.0121, loss_cls: 0.0265, loss_box: 0.0465, lr: 0.001000
+speed: 0.109s / iter.
+iter: 1020 / 9220, total loss: 0.1035, rpn_loss_cls: 0.0077, rpn_loss_box: 0.0029, loss_cls: 0.0621, loss_box: 0.0307, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1030 / 9220, total loss: 0.2564, rpn_loss_cls: 0.0199, rpn_loss_box: 0.0039, loss_cls: 0.2141, loss_box: 0.0185, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1040 / 9220, total loss: 0.1096, rpn_loss_cls: 0.0233, rpn_loss_box: 0.0072, loss_cls: 0.0382, loss_box: 0.0408, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1050 / 9220, total loss: 0.0424, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0006, loss_cls: 0.0203, loss_box: 0.0215, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1060 / 9220, total loss: 0.2752, rpn_loss_cls: 0.0272, rpn_loss_box: 0.0064, loss_cls: 0.2093, loss_box: 0.0323, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1070 / 9220, total loss: 0.0464, rpn_loss_cls: 0.0022, rpn_loss_box: 0.0012, loss_cls: 0.0263, loss_box: 0.0167, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1080 / 9220, total loss: 0.1875, rpn_loss_cls: 0.0073, rpn_loss_box: 0.0046, loss_cls: 0.1170, loss_box: 0.0587, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1090 / 9220, total loss: 0.2202, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0030, loss_cls: 0.1770, loss_box: 0.0384, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1100 / 9220, total loss: 0.1236, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0730, loss_box: 0.0504, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1110 / 9220, total loss: 0.2465, rpn_loss_cls: 0.0049, rpn_loss_box: 0.0050, loss_cls: 0.1570, loss_box: 0.0796, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1120 / 9220, total loss: 0.1415, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0010, loss_cls: 0.1282, loss_box: 0.0122, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1130 / 9220, total loss: 0.0381, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0290, loss_box: 0.0090, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1140 / 9220, total loss: 0.1314, rpn_loss_cls: 0.0064, rpn_loss_box: 0.0034, loss_cls: 0.0427, loss_box: 0.0789, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1150 / 9220, total loss: 0.0737, rpn_loss_cls: 0.0218, rpn_loss_box: 0.0022, loss_cls: 0.0249, loss_box: 0.0248, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1160 / 9220, total loss: 0.1790, rpn_loss_cls: 0.0270, rpn_loss_box: 0.0122, loss_cls: 0.0730, loss_box: 0.0669, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1170 / 9220, total loss: 0.2736, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0038, loss_cls: 0.2547, loss_box: 0.0151, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1180 / 9220, total loss: 0.0366, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0174, loss_box: 0.0188, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1190 / 9220, total loss: 0.1216, rpn_loss_cls: 0.0032, rpn_loss_box: 0.0014, loss_cls: 0.0327, loss_box: 0.0842, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1200 / 9220, total loss: 0.2268, rpn_loss_cls: 0.0533, rpn_loss_box: 0.0014, loss_cls: 0.0759, loss_box: 0.0962, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1210 / 9220, total loss: 0.1276, rpn_loss_cls: 0.0255, rpn_loss_box: 0.0026, loss_cls: 0.0790, loss_box: 0.0206, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1220 / 9220, total loss: 0.0272, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0023, loss_box: 0.0248, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1230 / 9220, total loss: 0.0798, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0008, loss_cls: 0.0111, loss_box: 0.0679, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1240 / 9220, total loss: 0.2235, rpn_loss_cls: 0.0402, rpn_loss_box: 0.0042, loss_cls: 0.1199, loss_box: 0.0592, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1250 / 9220, total loss: 0.0305, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0004, loss_cls: 0.0065, loss_box: 0.0235, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1260 / 9220, total loss: 0.0136, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0012, loss_box: 0.0119, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1270 / 9220, total loss: 0.0622, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0020, loss_cls: 0.0304, loss_box: 0.0294, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1280 / 9220, total loss: 0.2397, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0085, loss_cls: 0.1652, loss_box: 0.0643, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1290 / 9220, total loss: 0.0949, rpn_loss_cls: 0.0031, rpn_loss_box: 0.0009, loss_cls: 0.0661, loss_box: 0.0248, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1300 / 9220, total loss: 0.1594, rpn_loss_cls: 0.0048, rpn_loss_box: 0.0010, loss_cls: 0.1099, loss_box: 0.0436, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1310 / 9220, total loss: 0.2147, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0056, loss_cls: 0.1038, loss_box: 0.1049, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1320 / 9220, total loss: 0.0813, rpn_loss_cls: 0.0106, rpn_loss_box: 0.0012, loss_cls: 0.0383, loss_box: 0.0312, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1330 / 9220, total loss: 0.2438, rpn_loss_cls: 0.0469, rpn_loss_box: 0.0115, loss_cls: 0.1276, loss_box: 0.0578, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1340 / 9220, total loss: 0.1113, rpn_loss_cls: 0.0042, rpn_loss_box: 0.0016, loss_cls: 0.0834, loss_box: 0.0222, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1350 / 9220, total loss: 0.1762, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0008, loss_cls: 0.1149, loss_box: 0.0579, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1360 / 9220, total loss: 0.0384, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0150, loss_box: 0.0234, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1370 / 9220, total loss: 0.0174, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0033, loss_box: 0.0136, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1380 / 9220, total loss: 0.4452, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0005, loss_cls: 0.3956, loss_box: 0.0485, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1390 / 9220, total loss: 0.0319, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0007, loss_cls: 0.0007, loss_box: 0.0301, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1400 / 9220, total loss: 0.2006, rpn_loss_cls: 0.0155, rpn_loss_box: 0.0136, loss_cls: 0.1238, loss_box: 0.0476, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1410 / 9220, total loss: 0.2096, rpn_loss_cls: 0.0384, rpn_loss_box: 0.0018, loss_cls: 0.0797, loss_box: 0.0896, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1420 / 9220, total loss: 0.0643, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0448, loss_box: 0.0189, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1430 / 9220, total loss: 0.2658, rpn_loss_cls: 0.0258, rpn_loss_box: 0.0005, loss_cls: 0.1683, loss_box: 0.0711, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1440 / 9220, total loss: 0.0807, rpn_loss_cls: 0.0096, rpn_loss_box: 0.0019, loss_cls: 0.0443, loss_box: 0.0249, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1450 / 9220, total loss: 0.3969, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.3906, loss_box: 0.0062, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1460 / 9220, total loss: 0.1855, rpn_loss_cls: 0.0074, rpn_loss_box: 0.0130, loss_cls: 0.1288, loss_box: 0.0363, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1470 / 9220, total loss: 0.0916, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0003, loss_cls: 0.0588, loss_box: 0.0317, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1480 / 9220, total loss: 0.0824, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.0334, loss_box: 0.0482, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1490 / 9220, total loss: 0.1144, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0015, loss_cls: 0.0911, loss_box: 0.0216, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1500 / 9220, total loss: 0.2852, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0005, loss_cls: 0.2330, loss_box: 0.0515, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1510 / 9220, total loss: 0.0594, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0008, loss_cls: 0.0358, loss_box: 0.0228, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1520 / 9220, total loss: 0.0096, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0014, loss_box: 0.0077, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1530 / 9220, total loss: 0.1475, rpn_loss_cls: 0.0096, rpn_loss_box: 0.0164, loss_cls: 0.1026, loss_box: 0.0188, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1540 / 9220, total loss: 0.0309, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0004, loss_cls: 0.0040, loss_box: 0.0262, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1550 / 9220, total loss: 0.0655, rpn_loss_cls: 0.0048, rpn_loss_box: 0.0002, loss_cls: 0.0228, loss_box: 0.0378, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1560 / 9220, total loss: 0.0764, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0010, loss_cls: 0.0524, loss_box: 0.0202, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1570 / 9220, total loss: 0.0088, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0003, loss_cls: 0.0018, loss_box: 0.0059, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1580 / 9220, total loss: 0.0703, rpn_loss_cls: 0.0149, rpn_loss_box: 0.0004, loss_cls: 0.0398, loss_box: 0.0153, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1590 / 9220, total loss: 0.1010, rpn_loss_cls: 0.0232, rpn_loss_box: 0.0063, loss_cls: 0.0215, loss_box: 0.0501, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1600 / 9220, total loss: 0.3170, rpn_loss_cls: 0.0019, rpn_loss_box: 0.0050, loss_cls: 0.2122, loss_box: 0.0979, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1610 / 9220, total loss: 0.1599, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.1355, loss_box: 0.0240, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1620 / 9220, total loss: 0.1613, rpn_loss_cls: 0.0077, rpn_loss_box: 0.0003, loss_cls: 0.0760, loss_box: 0.0774, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1630 / 9220, total loss: 0.1254, rpn_loss_cls: 0.0094, rpn_loss_box: 0.0013, loss_cls: 0.0842, loss_box: 0.0306, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1640 / 9220, total loss: 0.2423, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0012, loss_cls: 0.1949, loss_box: 0.0458, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1650 / 9220, total loss: 0.0358, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0084, loss_box: 0.0267, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1660 / 9220, total loss: 0.2562, rpn_loss_cls: 0.1395, rpn_loss_box: 0.0086, loss_cls: 0.0718, loss_box: 0.0362, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1670 / 9220, total loss: 0.1579, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0014, loss_cls: 0.1334, loss_box: 0.0227, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1680 / 9220, total loss: 0.0986, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0109, loss_box: 0.0871, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1690 / 9220, total loss: 0.0357, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0004, loss_cls: 0.0126, loss_box: 0.0222, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1700 / 9220, total loss: 0.0203, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0004, loss_cls: 0.0037, loss_box: 0.0158, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1710 / 9220, total loss: 0.0221, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0000, loss_cls: 0.0093, loss_box: 0.0128, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1720 / 9220, total loss: 0.0307, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0175, loss_box: 0.0126, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1730 / 9220, total loss: 0.5011, rpn_loss_cls: 0.0695, rpn_loss_box: 0.1031, loss_cls: 0.2550, loss_box: 0.0735, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1740 / 9220, total loss: 0.2258, rpn_loss_cls: 0.0077, rpn_loss_box: 0.0013, loss_cls: 0.1642, loss_box: 0.0526, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1750 / 9220, total loss: 0.0809, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0601, loss_box: 0.0206, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1760 / 9220, total loss: 0.1700, rpn_loss_cls: 0.0255, rpn_loss_box: 0.0055, loss_cls: 0.1151, loss_box: 0.0239, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1770 / 9220, total loss: 0.3251, rpn_loss_cls: 0.0077, rpn_loss_box: 0.0189, loss_cls: 0.1885, loss_box: 0.1101, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1780 / 9220, total loss: 0.3471, rpn_loss_cls: 0.0572, rpn_loss_box: 0.0013, loss_cls: 0.1969, loss_box: 0.0918, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1790 / 9220, total loss: 0.1121, rpn_loss_cls: 0.0044, rpn_loss_box: 0.0050, loss_cls: 0.0874, loss_box: 0.0153, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1800 / 9220, total loss: 0.1428, rpn_loss_cls: 0.0172, rpn_loss_box: 0.0228, loss_cls: 0.0639, loss_box: 0.0389, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1810 / 9220, total loss: 0.0717, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0032, loss_cls: 0.0597, loss_box: 0.0073, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1820 / 9220, total loss: 0.2468, rpn_loss_cls: 0.0454, rpn_loss_box: 0.0025, loss_cls: 0.0648, loss_box: 0.1342, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1830 / 9220, total loss: 0.3236, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0034, loss_cls: 0.2634, loss_box: 0.0559, lr: 0.001000
+speed: 0.108s / iter.
+iter: 1840 / 9220, total loss: 0.5170, rpn_loss_cls: 0.0115, rpn_loss_box: 0.0012, loss_cls: 0.4384, loss_box: 0.0658, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1850 / 9220, total loss: 0.2293, rpn_loss_cls: 0.0092, rpn_loss_box: 0.0007, loss_cls: 0.1176, loss_box: 0.1018, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1860 / 9220, total loss: 0.1620, rpn_loss_cls: 0.0408, rpn_loss_box: 0.0021, loss_cls: 0.0961, loss_box: 0.0230, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1870 / 9220, total loss: 0.0763, rpn_loss_cls: 0.0197, rpn_loss_box: 0.0023, loss_cls: 0.0136, loss_box: 0.0407, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1880 / 9220, total loss: 0.0151, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0005, loss_box: 0.0142, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1890 / 9220, total loss: 0.1296, rpn_loss_cls: 0.0306, rpn_loss_box: 0.0057, loss_cls: 0.0566, loss_box: 0.0368, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1900 / 9220, total loss: 0.2300, rpn_loss_cls: 0.0055, rpn_loss_box: 0.0061, loss_cls: 0.1852, loss_box: 0.0332, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1910 / 9220, total loss: 0.1178, rpn_loss_cls: 0.0404, rpn_loss_box: 0.0003, loss_cls: 0.0568, loss_box: 0.0203, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1920 / 9220, total loss: 0.3246, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.2702, loss_box: 0.0542, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1930 / 9220, total loss: 0.1449, rpn_loss_cls: 0.0264, rpn_loss_box: 0.0083, loss_cls: 0.0624, loss_box: 0.0477, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1940 / 9220, total loss: 0.0888, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0051, loss_box: 0.0834, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1950 / 9220, total loss: 0.0665, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0016, loss_cls: 0.0397, loss_box: 0.0249, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1960 / 9220, total loss: 0.0124, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0036, loss_box: 0.0086, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1970 / 9220, total loss: 0.2025, rpn_loss_cls: 0.0231, rpn_loss_box: 0.0068, loss_cls: 0.0923, loss_box: 0.0803, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1980 / 9220, total loss: 0.0952, rpn_loss_cls: 0.0100, rpn_loss_box: 0.0028, loss_cls: 0.0525, loss_box: 0.0300, lr: 0.001000
+speed: 0.107s / iter.
+iter: 1990 / 9220, total loss: 0.5221, rpn_loss_cls: 0.0272, rpn_loss_box: 0.0038, loss_cls: 0.2878, loss_box: 0.2033, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2000 / 9220, total loss: 0.1626, rpn_loss_cls: 0.0102, rpn_loss_box: 0.0019, loss_cls: 0.1091, loss_box: 0.0415, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2010 / 9220, total loss: 0.0286, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0014, loss_cls: 0.0003, loss_box: 0.0268, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2020 / 9220, total loss: 0.2211, rpn_loss_cls: 0.0492, rpn_loss_box: 0.0122, loss_cls: 0.0833, loss_box: 0.0764, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2030 / 9220, total loss: 0.1710, rpn_loss_cls: 0.0062, rpn_loss_box: 0.0080, loss_cls: 0.0643, loss_box: 0.0925, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2040 / 9220, total loss: 0.0525, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0009, loss_cls: 0.0301, loss_box: 0.0214, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2050 / 9220, total loss: 0.0393, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0278, loss_box: 0.0113, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2060 / 9220, total loss: 0.2178, rpn_loss_cls: 0.0019, rpn_loss_box: 0.0068, loss_cls: 0.1757, loss_box: 0.0334, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2070 / 9220, total loss: 0.0953, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.0542, loss_box: 0.0403, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2080 / 9220, total loss: 0.3560, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0006, loss_cls: 0.2900, loss_box: 0.0651, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2090 / 9220, total loss: 0.0145, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0008, loss_box: 0.0132, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2100 / 9220, total loss: 0.0587, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0259, loss_box: 0.0324, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2110 / 9220, total loss: 0.0254, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0018, loss_cls: 0.0014, loss_box: 0.0222, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2120 / 9220, total loss: 0.0394, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0275, loss_box: 0.0117, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2130 / 9220, total loss: 0.3966, rpn_loss_cls: 0.0417, rpn_loss_box: 0.0074, loss_cls: 0.2918, loss_box: 0.0556, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2140 / 9220, total loss: 0.1989, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.1738, loss_box: 0.0247, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2150 / 9220, total loss: 0.4447, rpn_loss_cls: 0.0304, rpn_loss_box: 0.0021, loss_cls: 0.3154, loss_box: 0.0967, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2160 / 9220, total loss: 0.1595, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0003, loss_cls: 0.1302, loss_box: 0.0278, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2170 / 9220, total loss: 0.1544, rpn_loss_cls: 0.0150, rpn_loss_box: 0.0015, loss_cls: 0.0779, loss_box: 0.0601, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2180 / 9220, total loss: 0.8204, rpn_loss_cls: 0.0066, rpn_loss_box: 0.0133, loss_cls: 0.5602, loss_box: 0.2402, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2190 / 9220, total loss: 0.0289, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.0162, loss_box: 0.0122, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2200 / 9220, total loss: 0.2926, rpn_loss_cls: 0.0096, rpn_loss_box: 0.0019, loss_cls: 0.2101, loss_box: 0.0710, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2210 / 9220, total loss: 0.0084, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0021, loss_box: 0.0061, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2220 / 9220, total loss: 0.3425, rpn_loss_cls: 0.0297, rpn_loss_box: 0.0130, loss_cls: 0.2692, loss_box: 0.0307, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2230 / 9220, total loss: 0.2967, rpn_loss_cls: 0.0252, rpn_loss_box: 0.0041, loss_cls: 0.2222, loss_box: 0.0453, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2240 / 9220, total loss: 0.1544, rpn_loss_cls: 0.0046, rpn_loss_box: 0.0098, loss_cls: 0.1079, loss_box: 0.0321, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2250 / 9220, total loss: 0.0404, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0004, loss_cls: 0.0192, loss_box: 0.0207, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2260 / 9220, total loss: 0.0710, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0011, loss_cls: 0.0312, loss_box: 0.0386, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2270 / 9220, total loss: 0.0931, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0382, loss_box: 0.0543, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2280 / 9220, total loss: 0.1542, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0008, loss_cls: 0.1365, loss_box: 0.0162, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2290 / 9220, total loss: 0.1316, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0003, loss_cls: 0.0764, loss_box: 0.0544, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2300 / 9220, total loss: 0.5104, rpn_loss_cls: 0.0250, rpn_loss_box: 0.0190, loss_cls: 0.2673, loss_box: 0.1991, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2310 / 9220, total loss: 0.0239, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0009, loss_cls: 0.0018, loss_box: 0.0209, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2320 / 9220, total loss: 0.1019, rpn_loss_cls: 0.0029, rpn_loss_box: 0.0034, loss_cls: 0.0627, loss_box: 0.0330, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2330 / 9220, total loss: 0.0597, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0006, loss_cls: 0.0012, loss_box: 0.0575, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2340 / 9220, total loss: 0.6941, rpn_loss_cls: 0.0191, rpn_loss_box: 0.0012, loss_cls: 0.5958, loss_box: 0.0780, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2350 / 9220, total loss: 0.0263, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0008, loss_cls: 0.0186, loss_box: 0.0068, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2360 / 9220, total loss: 0.1249, rpn_loss_cls: 0.0030, rpn_loss_box: 0.0035, loss_cls: 0.0990, loss_box: 0.0194, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2370 / 9220, total loss: 0.1347, rpn_loss_cls: 0.0050, rpn_loss_box: 0.0004, loss_cls: 0.0691, loss_box: 0.0602, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2380 / 9220, total loss: 0.0826, rpn_loss_cls: 0.0023, rpn_loss_box: 0.0073, loss_cls: 0.0389, loss_box: 0.0341, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2390 / 9220, total loss: 0.1931, rpn_loss_cls: 0.0194, rpn_loss_box: 0.0005, loss_cls: 0.0927, loss_box: 0.0806, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2400 / 9220, total loss: 0.0887, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0048, loss_cls: 0.0602, loss_box: 0.0227, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2410 / 9220, total loss: 0.0334, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0077, loss_box: 0.0254, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2420 / 9220, total loss: 0.1065, rpn_loss_cls: 0.0218, rpn_loss_box: 0.0033, loss_cls: 0.0527, loss_box: 0.0286, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2430 / 9220, total loss: 0.0314, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0002, loss_box: 0.0308, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2440 / 9220, total loss: 0.0987, rpn_loss_cls: 0.0137, rpn_loss_box: 0.0041, loss_cls: 0.0604, loss_box: 0.0205, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2450 / 9220, total loss: 0.0528, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0250, loss_box: 0.0274, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2460 / 9220, total loss: 0.0409, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0004, loss_cls: 0.0211, loss_box: 0.0167, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2470 / 9220, total loss: 0.0407, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0140, loss_box: 0.0262, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2480 / 9220, total loss: 0.0218, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0014, loss_box: 0.0201, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2490 / 9220, total loss: 0.0683, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0470, loss_box: 0.0209, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2500 / 9220, total loss: 0.2077, rpn_loss_cls: 0.0025, rpn_loss_box: 0.0041, loss_cls: 0.1332, loss_box: 0.0679, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2510 / 9220, total loss: 0.0561, rpn_loss_cls: 0.0031, rpn_loss_box: 0.0013, loss_cls: 0.0440, loss_box: 0.0078, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2520 / 9220, total loss: 0.1275, rpn_loss_cls: 0.0135, rpn_loss_box: 0.0287, loss_cls: 0.0471, loss_box: 0.0382, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2530 / 9220, total loss: 0.1538, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0393, loss_cls: 0.0656, loss_box: 0.0449, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2540 / 9220, total loss: 0.0724, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0019, loss_cls: 0.0292, loss_box: 0.0409, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2550 / 9220, total loss: 0.0315, rpn_loss_cls: 0.0045, rpn_loss_box: 0.0016, loss_cls: 0.0090, loss_box: 0.0164, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2560 / 9220, total loss: 0.0522, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0009, loss_cls: 0.0401, loss_box: 0.0108, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2570 / 9220, total loss: 0.2326, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0010, loss_cls: 0.1884, loss_box: 0.0419, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2580 / 9220, total loss: 0.0280, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0008, loss_cls: 0.0005, loss_box: 0.0265, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2590 / 9220, total loss: 0.0534, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0308, loss_box: 0.0224, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2600 / 9220, total loss: 0.1655, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0045, loss_cls: 0.1137, loss_box: 0.0470, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2610 / 9220, total loss: 0.0886, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0005, loss_cls: 0.0666, loss_box: 0.0210, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2620 / 9220, total loss: 0.0133, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0007, loss_cls: 0.0067, loss_box: 0.0056, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2630 / 9220, total loss: 0.0262, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0010, loss_box: 0.0249, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2640 / 9220, total loss: 0.0767, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0000, loss_cls: 0.0494, loss_box: 0.0263, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2650 / 9220, total loss: 0.1335, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0002, loss_cls: 0.0474, loss_box: 0.0849, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2660 / 9220, total loss: 0.2112, rpn_loss_cls: 0.0051, rpn_loss_box: 0.0034, loss_cls: 0.0814, loss_box: 0.1214, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2670 / 9220, total loss: 0.1249, rpn_loss_cls: 0.0092, rpn_loss_box: 0.0216, loss_cls: 0.0550, loss_box: 0.0392, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2680 / 9220, total loss: 0.2242, rpn_loss_cls: 0.0023, rpn_loss_box: 0.0002, loss_cls: 0.1948, loss_box: 0.0269, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2690 / 9220, total loss: 0.0214, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0009, loss_cls: 0.0030, loss_box: 0.0173, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2700 / 9220, total loss: 0.1169, rpn_loss_cls: 0.0111, rpn_loss_box: 0.0009, loss_cls: 0.0546, loss_box: 0.0503, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2710 / 9220, total loss: 0.0280, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0112, loss_box: 0.0166, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2720 / 9220, total loss: 0.0975, rpn_loss_cls: 0.0217, rpn_loss_box: 0.0006, loss_cls: 0.0596, loss_box: 0.0156, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2730 / 9220, total loss: 0.3367, rpn_loss_cls: 0.0247, rpn_loss_box: 0.0002, loss_cls: 0.2420, loss_box: 0.0697, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2740 / 9220, total loss: 0.0104, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0000, loss_cls: 0.0020, loss_box: 0.0079, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2750 / 9220, total loss: 0.2075, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0009, loss_cls: 0.1488, loss_box: 0.0578, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2760 / 9220, total loss: 0.0072, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0016, loss_box: 0.0054, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2770 / 9220, total loss: 0.1508, rpn_loss_cls: 0.0078, rpn_loss_box: 0.0295, loss_cls: 0.0366, loss_box: 0.0768, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2780 / 9220, total loss: 0.0764, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0655, loss_box: 0.0107, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2790 / 9220, total loss: 0.0332, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0004, loss_box: 0.0323, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2800 / 9220, total loss: 0.3264, rpn_loss_cls: 0.0065, rpn_loss_box: 0.0010, loss_cls: 0.2623, loss_box: 0.0566, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2810 / 9220, total loss: 0.1715, rpn_loss_cls: 0.0243, rpn_loss_box: 0.0135, loss_cls: 0.0964, loss_box: 0.0373, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2820 / 9220, total loss: 0.0482, rpn_loss_cls: 0.0058, rpn_loss_box: 0.0035, loss_cls: 0.0188, loss_box: 0.0201, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2830 / 9220, total loss: 0.0161, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0019, loss_box: 0.0135, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2840 / 9220, total loss: 0.2558, rpn_loss_cls: 0.0209, rpn_loss_box: 0.0057, loss_cls: 0.1837, loss_box: 0.0455, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2850 / 9220, total loss: 0.2851, rpn_loss_cls: 0.0092, rpn_loss_box: 0.0035, loss_cls: 0.2636, loss_box: 0.0088, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2860 / 9220, total loss: 0.0252, rpn_loss_cls: 0.0201, rpn_loss_box: 0.0001, loss_cls: 0.0005, loss_box: 0.0045, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2870 / 9220, total loss: 0.0583, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0450, loss_box: 0.0131, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2880 / 9220, total loss: 0.1096, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0006, loss_cls: 0.0892, loss_box: 0.0195, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2890 / 9220, total loss: 0.3827, rpn_loss_cls: 0.0225, rpn_loss_box: 0.0041, loss_cls: 0.2477, loss_box: 0.1083, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2900 / 9220, total loss: 0.0672, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0003, loss_cls: 0.0489, loss_box: 0.0174, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2910 / 9220, total loss: 0.0807, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0145, loss_cls: 0.0160, loss_box: 0.0474, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2920 / 9220, total loss: 0.0757, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0012, loss_cls: 0.0571, loss_box: 0.0173, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2930 / 9220, total loss: 0.1618, rpn_loss_cls: 0.0029, rpn_loss_box: 0.0043, loss_cls: 0.0710, loss_box: 0.0837, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2940 / 9220, total loss: 0.1722, rpn_loss_cls: 0.0279, rpn_loss_box: 0.0285, loss_cls: 0.0871, loss_box: 0.0286, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2950 / 9220, total loss: 0.0683, rpn_loss_cls: 0.0019, rpn_loss_box: 0.0004, loss_cls: 0.0424, loss_box: 0.0237, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2960 / 9220, total loss: 0.3272, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0030, loss_cls: 0.2969, loss_box: 0.0257, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2970 / 9220, total loss: 0.0252, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0080, loss_box: 0.0169, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2980 / 9220, total loss: 0.0936, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0716, loss_box: 0.0218, lr: 0.001000
+speed: 0.107s / iter.
+iter: 2990 / 9220, total loss: 0.1255, rpn_loss_cls: 0.0291, rpn_loss_box: 0.0047, loss_cls: 0.0432, loss_box: 0.0486, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3000 / 9220, total loss: 0.0344, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0009, loss_cls: 0.0115, loss_box: 0.0206, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3010 / 9220, total loss: 0.0495, rpn_loss_cls: 0.0037, rpn_loss_box: 0.0001, loss_cls: 0.0407, loss_box: 0.0049, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3020 / 9220, total loss: 0.1055, rpn_loss_cls: 0.0122, rpn_loss_box: 0.0048, loss_cls: 0.0510, loss_box: 0.0375, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3030 / 9220, total loss: 0.2831, rpn_loss_cls: 0.0092, rpn_loss_box: 0.0069, loss_cls: 0.2219, loss_box: 0.0451, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3040 / 9220, total loss: 0.2053, rpn_loss_cls: 0.0081, rpn_loss_box: 0.0307, loss_cls: 0.1022, loss_box: 0.0642, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3050 / 9220, total loss: 0.1166, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0583, loss_box: 0.0578, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3060 / 9220, total loss: 0.2769, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0008, loss_cls: 0.1887, loss_box: 0.0868, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3070 / 9220, total loss: 0.0461, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0167, loss_box: 0.0291, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3080 / 9220, total loss: 0.0997, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0002, loss_cls: 0.0453, loss_box: 0.0533, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3090 / 9220, total loss: 0.2963, rpn_loss_cls: 0.0171, rpn_loss_box: 0.0010, loss_cls: 0.2008, loss_box: 0.0774, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3100 / 9220, total loss: 0.1195, rpn_loss_cls: 0.0115, rpn_loss_box: 0.0058, loss_cls: 0.0835, loss_box: 0.0188, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3110 / 9220, total loss: 0.0495, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0208, loss_box: 0.0280, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3120 / 9220, total loss: 0.0386, rpn_loss_cls: 0.0032, rpn_loss_box: 0.0010, loss_cls: 0.0154, loss_box: 0.0190, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3130 / 9220, total loss: 0.5549, rpn_loss_cls: 0.0534, rpn_loss_box: 0.0020, loss_cls: 0.4135, loss_box: 0.0860, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3140 / 9220, total loss: 0.0783, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0050, loss_cls: 0.0519, loss_box: 0.0199, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3150 / 9220, total loss: 0.1482, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0006, loss_cls: 0.0367, loss_box: 0.1069, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3160 / 9220, total loss: 0.1162, rpn_loss_cls: 0.0066, rpn_loss_box: 0.0002, loss_cls: 0.0660, loss_box: 0.0435, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3170 / 9220, total loss: 0.1961, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0016, loss_cls: 0.1689, loss_box: 0.0247, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3180 / 9220, total loss: 0.3746, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0002, loss_cls: 0.3558, loss_box: 0.0182, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3190 / 9220, total loss: 0.1829, rpn_loss_cls: 0.0353, rpn_loss_box: 0.0019, loss_cls: 0.1069, loss_box: 0.0388, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3200 / 9220, total loss: 0.0549, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0005, loss_cls: 0.0193, loss_box: 0.0347, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3210 / 9220, total loss: 0.2213, rpn_loss_cls: 0.0154, rpn_loss_box: 0.0076, loss_cls: 0.1391, loss_box: 0.0592, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3220 / 9220, total loss: 0.0339, rpn_loss_cls: 0.0065, rpn_loss_box: 0.0015, loss_cls: 0.0160, loss_box: 0.0099, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3230 / 9220, total loss: 0.0814, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0006, loss_cls: 0.0546, loss_box: 0.0259, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3240 / 9220, total loss: 0.0689, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0390, loss_box: 0.0296, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3250 / 9220, total loss: 0.0144, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0013, loss_box: 0.0127, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3260 / 9220, total loss: 0.0929, rpn_loss_cls: 0.0132, rpn_loss_box: 0.0010, loss_cls: 0.0459, loss_box: 0.0328, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3270 / 9220, total loss: 0.0955, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0387, loss_box: 0.0564, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3280 / 9220, total loss: 0.1071, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0776, loss_box: 0.0293, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3290 / 9220, total loss: 0.0337, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0261, loss_box: 0.0075, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3300 / 9220, total loss: 0.1555, rpn_loss_cls: 0.0274, rpn_loss_box: 0.0000, loss_cls: 0.0799, loss_box: 0.0482, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3310 / 9220, total loss: 0.0872, rpn_loss_cls: 0.0080, rpn_loss_box: 0.0015, loss_cls: 0.0406, loss_box: 0.0372, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3320 / 9220, total loss: 0.0614, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0025, loss_cls: 0.0422, loss_box: 0.0161, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3330 / 9220, total loss: 0.0946, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0009, loss_cls: 0.0598, loss_box: 0.0324, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3340 / 9220, total loss: 0.0731, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0445, loss_box: 0.0280, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3350 / 9220, total loss: 0.0377, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0292, loss_box: 0.0083, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3360 / 9220, total loss: 0.2093, rpn_loss_cls: 0.0310, rpn_loss_box: 0.0260, loss_cls: 0.0922, loss_box: 0.0601, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3370 / 9220, total loss: 0.1953, rpn_loss_cls: 0.0173, rpn_loss_box: 0.0086, loss_cls: 0.0530, loss_box: 0.1164, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3380 / 9220, total loss: 0.4103, rpn_loss_cls: 0.0421, rpn_loss_box: 0.0016, loss_cls: 0.2835, loss_box: 0.0832, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3390 / 9220, total loss: 0.0492, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.0202, loss_box: 0.0285, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3400 / 9220, total loss: 0.0856, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0214, loss_cls: 0.0329, loss_box: 0.0305, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3410 / 9220, total loss: 0.1764, rpn_loss_cls: 0.0151, rpn_loss_box: 0.0019, loss_cls: 0.0997, loss_box: 0.0597, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3420 / 9220, total loss: 0.0165, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0089, loss_box: 0.0075, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3430 / 9220, total loss: 0.2626, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0018, loss_cls: 0.2175, loss_box: 0.0431, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3440 / 9220, total loss: 0.0211, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0010, loss_box: 0.0200, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3450 / 9220, total loss: 0.1780, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0007, loss_cls: 0.1219, loss_box: 0.0553, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3460 / 9220, total loss: 0.1506, rpn_loss_cls: 0.0164, rpn_loss_box: 0.0031, loss_cls: 0.0918, loss_box: 0.0394, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3470 / 9220, total loss: 0.1092, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0004, loss_cls: 0.0709, loss_box: 0.0372, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3480 / 9220, total loss: 0.0919, rpn_loss_cls: 0.0100, rpn_loss_box: 0.0050, loss_cls: 0.0384, loss_box: 0.0385, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3490 / 9220, total loss: 0.0732, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0014, loss_cls: 0.0330, loss_box: 0.0367, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3500 / 9220, total loss: 0.0902, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0741, loss_box: 0.0158, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3510 / 9220, total loss: 0.0937, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0119, loss_cls: 0.0355, loss_box: 0.0460, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3520 / 9220, total loss: 0.1248, rpn_loss_cls: 0.0034, rpn_loss_box: 0.0029, loss_cls: 0.0655, loss_box: 0.0530, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3530 / 9220, total loss: 0.4296, rpn_loss_cls: 0.0383, rpn_loss_box: 0.0021, loss_cls: 0.3498, loss_box: 0.0394, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3540 / 9220, total loss: 0.2200, rpn_loss_cls: 0.0112, rpn_loss_box: 0.0163, loss_cls: 0.1417, loss_box: 0.0509, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3550 / 9220, total loss: 0.0245, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0029, loss_box: 0.0213, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3560 / 9220, total loss: 0.2629, rpn_loss_cls: 0.0154, rpn_loss_box: 0.0036, loss_cls: 0.1525, loss_box: 0.0915, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3570 / 9220, total loss: 0.0870, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0012, loss_cls: 0.0449, loss_box: 0.0405, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3580 / 9220, total loss: 0.1996, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0010, loss_cls: 0.1703, loss_box: 0.0243, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3590 / 9220, total loss: 0.1236, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0018, loss_cls: 0.0712, loss_box: 0.0502, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3600 / 9220, total loss: 0.0617, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0557, loss_box: 0.0059, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3610 / 9220, total loss: 0.2496, rpn_loss_cls: 0.0284, rpn_loss_box: 0.0004, loss_cls: 0.1540, loss_box: 0.0668, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3620 / 9220, total loss: 0.0486, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0003, loss_cls: 0.0245, loss_box: 0.0234, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3630 / 9220, total loss: 0.0620, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0458, loss_box: 0.0158, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3640 / 9220, total loss: 0.1011, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0011, loss_cls: 0.0797, loss_box: 0.0197, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3650 / 9220, total loss: 0.2173, rpn_loss_cls: 0.0065, rpn_loss_box: 0.0184, loss_cls: 0.1144, loss_box: 0.0779, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3660 / 9220, total loss: 0.1731, rpn_loss_cls: 0.0229, rpn_loss_box: 0.0006, loss_cls: 0.1346, loss_box: 0.0150, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3670 / 9220, total loss: 0.1900, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0022, loss_cls: 0.1165, loss_box: 0.0705, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3680 / 9220, total loss: 0.0649, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0420, loss_box: 0.0225, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3690 / 9220, total loss: 0.2169, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0018, loss_cls: 0.1806, loss_box: 0.0343, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3700 / 9220, total loss: 0.1723, rpn_loss_cls: 0.0077, rpn_loss_box: 0.0022, loss_cls: 0.1184, loss_box: 0.0439, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3710 / 9220, total loss: 0.0564, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0004, loss_cls: 0.0252, loss_box: 0.0306, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3720 / 9220, total loss: 0.0456, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0202, loss_box: 0.0250, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3730 / 9220, total loss: 0.0877, rpn_loss_cls: 0.0116, rpn_loss_box: 0.0006, loss_cls: 0.0167, loss_box: 0.0588, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3740 / 9220, total loss: 0.1447, rpn_loss_cls: 0.0282, rpn_loss_box: 0.0001, loss_cls: 0.0489, loss_box: 0.0675, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3750 / 9220, total loss: 0.0881, rpn_loss_cls: 0.0050, rpn_loss_box: 0.0040, loss_cls: 0.0227, loss_box: 0.0564, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3760 / 9220, total loss: 0.0213, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0054, loss_box: 0.0157, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3770 / 9220, total loss: 0.1166, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0020, loss_cls: 0.0812, loss_box: 0.0323, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3780 / 9220, total loss: 0.1654, rpn_loss_cls: 0.0173, rpn_loss_box: 0.0007, loss_cls: 0.1366, loss_box: 0.0108, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3790 / 9220, total loss: 0.2082, rpn_loss_cls: 0.0248, rpn_loss_box: 0.0291, loss_cls: 0.1265, loss_box: 0.0278, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3800 / 9220, total loss: 0.0373, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0283, loss_box: 0.0088, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3810 / 9220, total loss: 0.0895, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0001, loss_cls: 0.0593, loss_box: 0.0282, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3820 / 9220, total loss: 0.1874, rpn_loss_cls: 0.0206, rpn_loss_box: 0.0080, loss_cls: 0.1479, loss_box: 0.0108, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3830 / 9220, total loss: 0.0923, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0013, loss_cls: 0.0666, loss_box: 0.0209, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3840 / 9220, total loss: 0.0232, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0068, loss_box: 0.0161, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3850 / 9220, total loss: 0.3635, rpn_loss_cls: 0.0064, rpn_loss_box: 0.0010, loss_cls: 0.2600, loss_box: 0.0961, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3860 / 9220, total loss: 0.1155, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0012, loss_cls: 0.0893, loss_box: 0.0232, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3870 / 9220, total loss: 0.0354, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0000, loss_cls: 0.0259, loss_box: 0.0094, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3880 / 9220, total loss: 0.0920, rpn_loss_cls: 0.0169, rpn_loss_box: 0.0033, loss_cls: 0.0576, loss_box: 0.0143, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3890 / 9220, total loss: 0.0882, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0452, loss_box: 0.0424, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3900 / 9220, total loss: 0.2569, rpn_loss_cls: 0.0262, rpn_loss_box: 0.0276, loss_cls: 0.1360, loss_box: 0.0671, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3910 / 9220, total loss: 0.0398, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0000, loss_cls: 0.0212, loss_box: 0.0186, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3920 / 9220, total loss: 0.0176, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0009, loss_box: 0.0163, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3930 / 9220, total loss: 0.0824, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0116, loss_cls: 0.0420, loss_box: 0.0269, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3940 / 9220, total loss: 0.3334, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0044, loss_cls: 0.3113, loss_box: 0.0159, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3950 / 9220, total loss: 0.1002, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0007, loss_cls: 0.0547, loss_box: 0.0447, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3960 / 9220, total loss: 0.1368, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0008, loss_cls: 0.1221, loss_box: 0.0136, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3970 / 9220, total loss: 0.0172, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0002, loss_cls: 0.0101, loss_box: 0.0066, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3980 / 9220, total loss: 0.0388, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0007, loss_cls: 0.0277, loss_box: 0.0103, lr: 0.001000
+speed: 0.107s / iter.
+iter: 3990 / 9220, total loss: 0.0490, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0273, loss_box: 0.0216, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4000 / 9220, total loss: 0.1039, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0013, loss_cls: 0.0649, loss_box: 0.0371, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4010 / 9220, total loss: 0.2453, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0004, loss_cls: 0.1805, loss_box: 0.0628, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4020 / 9220, total loss: 0.1341, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0460, loss_cls: 0.0448, loss_box: 0.0418, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4030 / 9220, total loss: 0.0396, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0033, loss_cls: 0.0280, loss_box: 0.0081, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4040 / 9220, total loss: 0.1104, rpn_loss_cls: 0.0046, rpn_loss_box: 0.0067, loss_cls: 0.0591, loss_box: 0.0400, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4050 / 9220, total loss: 0.0549, rpn_loss_cls: 0.0025, rpn_loss_box: 0.0016, loss_cls: 0.0257, loss_box: 0.0250, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4060 / 9220, total loss: 0.1541, rpn_loss_cls: 0.0051, rpn_loss_box: 0.0013, loss_cls: 0.0700, loss_box: 0.0778, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4070 / 9220, total loss: 0.0369, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0285, loss_box: 0.0078, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4080 / 9220, total loss: 0.1521, rpn_loss_cls: 0.0332, rpn_loss_box: 0.0079, loss_cls: 0.0861, loss_box: 0.0249, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4090 / 9220, total loss: 0.0539, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0010, loss_box: 0.0522, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4100 / 9220, total loss: 0.1316, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0036, loss_cls: 0.0428, loss_box: 0.0845, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4110 / 9220, total loss: 0.0545, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0003, loss_cls: 0.0439, loss_box: 0.0087, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4120 / 9220, total loss: 0.0879, rpn_loss_cls: 0.0083, rpn_loss_box: 0.0004, loss_cls: 0.0601, loss_box: 0.0190, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4130 / 9220, total loss: 0.1098, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0006, loss_cls: 0.0640, loss_box: 0.0444, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4140 / 9220, total loss: 0.0799, rpn_loss_cls: 0.0279, rpn_loss_box: 0.0005, loss_cls: 0.0065, loss_box: 0.0450, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4150 / 9220, total loss: 0.2510, rpn_loss_cls: 0.0076, rpn_loss_box: 0.0035, loss_cls: 0.2171, loss_box: 0.0228, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4160 / 9220, total loss: 0.1768, rpn_loss_cls: 0.0138, rpn_loss_box: 0.0153, loss_cls: 0.0987, loss_box: 0.0489, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4170 / 9220, total loss: 0.0582, rpn_loss_cls: 0.0029, rpn_loss_box: 0.0005, loss_cls: 0.0222, loss_box: 0.0326, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4180 / 9220, total loss: 0.0948, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0006, loss_cls: 0.0449, loss_box: 0.0482, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4190 / 9220, total loss: 0.0825, rpn_loss_cls: 0.0027, rpn_loss_box: 0.0222, loss_cls: 0.0369, loss_box: 0.0207, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4200 / 9220, total loss: 0.0125, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0024, loss_box: 0.0100, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4210 / 9220, total loss: 0.1005, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0001, loss_cls: 0.0458, loss_box: 0.0536, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4220 / 9220, total loss: 0.2002, rpn_loss_cls: 0.0417, rpn_loss_box: 0.0019, loss_cls: 0.0397, loss_box: 0.1169, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4230 / 9220, total loss: 0.1248, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0031, loss_cls: 0.0970, loss_box: 0.0247, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4240 / 9220, total loss: 0.1636, rpn_loss_cls: 0.0062, rpn_loss_box: 0.0020, loss_cls: 0.0908, loss_box: 0.0646, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4250 / 9220, total loss: 0.0895, rpn_loss_cls: 0.0012, rpn_loss_box: 0.0004, loss_cls: 0.0696, loss_box: 0.0183, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4260 / 9220, total loss: 0.2203, rpn_loss_cls: 0.0188, rpn_loss_box: 0.0187, loss_cls: 0.1159, loss_box: 0.0669, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4270 / 9220, total loss: 0.0572, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0300, loss_box: 0.0268, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4280 / 9220, total loss: 0.0165, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0035, loss_box: 0.0128, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4290 / 9220, total loss: 0.0261, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0003, loss_cls: 0.0138, loss_box: 0.0112, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4300 / 9220, total loss: 0.0325, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0010, loss_cls: 0.0146, loss_box: 0.0165, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4310 / 9220, total loss: 0.0977, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0021, loss_cls: 0.0380, loss_box: 0.0574, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4320 / 9220, total loss: 0.0762, rpn_loss_cls: 0.0044, rpn_loss_box: 0.0152, loss_cls: 0.0193, loss_box: 0.0372, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4330 / 9220, total loss: 0.2282, rpn_loss_cls: 0.0277, rpn_loss_box: 0.0049, loss_cls: 0.1543, loss_box: 0.0413, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4340 / 9220, total loss: 0.0616, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0010, loss_cls: 0.0390, loss_box: 0.0197, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4350 / 9220, total loss: 0.0562, rpn_loss_cls: 0.0022, rpn_loss_box: 0.0045, loss_cls: 0.0301, loss_box: 0.0194, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4360 / 9220, total loss: 0.1514, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0010, loss_cls: 0.1305, loss_box: 0.0197, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4370 / 9220, total loss: 0.0479, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0278, loss_box: 0.0199, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4380 / 9220, total loss: 0.0613, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0014, loss_cls: 0.0304, loss_box: 0.0295, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4390 / 9220, total loss: 0.0846, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0017, loss_cls: 0.0634, loss_box: 0.0167, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4400 / 9220, total loss: 0.0347, rpn_loss_cls: 0.0046, rpn_loss_box: 0.0003, loss_cls: 0.0020, loss_box: 0.0278, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4410 / 9220, total loss: 0.0265, rpn_loss_cls: 0.0030, rpn_loss_box: 0.0003, loss_cls: 0.0050, loss_box: 0.0183, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4420 / 9220, total loss: 0.0161, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0000, loss_cls: 0.0009, loss_box: 0.0151, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4430 / 9220, total loss: 0.0873, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0722, loss_box: 0.0146, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4440 / 9220, total loss: 0.0392, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0008, loss_cls: 0.0003, loss_box: 0.0381, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4450 / 9220, total loss: 0.1433, rpn_loss_cls: 0.0091, rpn_loss_box: 0.0024, loss_cls: 0.1095, loss_box: 0.0224, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4460 / 9220, total loss: 0.0673, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0009, loss_cls: 0.0287, loss_box: 0.0360, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4470 / 9220, total loss: 0.1293, rpn_loss_cls: 0.0125, rpn_loss_box: 0.0027, loss_cls: 0.0648, loss_box: 0.0493, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4480 / 9220, total loss: 0.1297, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0002, loss_cls: 0.0773, loss_box: 0.0506, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4490 / 9220, total loss: 0.0412, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0163, loss_box: 0.0246, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4500 / 9220, total loss: 0.1150, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0835, loss_box: 0.0313, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4510 / 9220, total loss: 0.1559, rpn_loss_cls: 0.0070, rpn_loss_box: 0.0022, loss_cls: 0.1113, loss_box: 0.0354, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4520 / 9220, total loss: 0.0118, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0000, loss_cls: 0.0034, loss_box: 0.0083, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4530 / 9220, total loss: 0.1304, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0013, loss_cls: 0.0950, loss_box: 0.0342, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4540 / 9220, total loss: 0.2701, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.2593, loss_box: 0.0106, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4550 / 9220, total loss: 0.0584, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0014, loss_cls: 0.0395, loss_box: 0.0169, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4560 / 9220, total loss: 0.0552, rpn_loss_cls: 0.0053, rpn_loss_box: 0.0011, loss_cls: 0.0320, loss_box: 0.0167, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4570 / 9220, total loss: 0.0417, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0000, loss_cls: 0.0364, loss_box: 0.0051, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4580 / 9220, total loss: 0.0309, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0000, loss_cls: 0.0244, loss_box: 0.0047, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4590 / 9220, total loss: 0.0741, rpn_loss_cls: 0.0081, rpn_loss_box: 0.0099, loss_cls: 0.0409, loss_box: 0.0153, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4600 / 9220, total loss: 0.0904, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0008, loss_cls: 0.0374, loss_box: 0.0521, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4610 / 9220, total loss: 0.2411, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0000, loss_cls: 0.2141, loss_box: 0.0266, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4620 / 9220, total loss: 0.1126, rpn_loss_cls: 0.0343, rpn_loss_box: 0.0032, loss_cls: 0.0401, loss_box: 0.0349, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4630 / 9220, total loss: 0.0775, rpn_loss_cls: 0.0033, rpn_loss_box: 0.0026, loss_cls: 0.0384, loss_box: 0.0333, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4640 / 9220, total loss: 0.0446, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0005, loss_cls: 0.0076, loss_box: 0.0350, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4650 / 9220, total loss: 0.0137, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0043, loss_box: 0.0092, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4660 / 9220, total loss: 0.1398, rpn_loss_cls: 0.0012, rpn_loss_box: 0.0002, loss_cls: 0.0614, loss_box: 0.0770, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4670 / 9220, total loss: 0.1182, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0024, loss_cls: 0.0439, loss_box: 0.0713, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4680 / 9220, total loss: 0.0124, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0015, loss_box: 0.0106, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4690 / 9220, total loss: 0.0155, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0020, loss_box: 0.0130, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4700 / 9220, total loss: 0.1660, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0006, loss_cls: 0.1036, loss_box: 0.0614, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4710 / 9220, total loss: 0.1330, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0012, loss_cls: 0.1177, loss_box: 0.0139, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4720 / 9220, total loss: 0.1976, rpn_loss_cls: 0.0450, rpn_loss_box: 0.0175, loss_cls: 0.0898, loss_box: 0.0452, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4730 / 9220, total loss: 0.1047, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0018, loss_cls: 0.0622, loss_box: 0.0405, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4740 / 9220, total loss: 0.1495, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0102, loss_cls: 0.0989, loss_box: 0.0376, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4750 / 9220, total loss: 0.0851, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0006, loss_cls: 0.0617, loss_box: 0.0212, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4760 / 9220, total loss: 0.0281, rpn_loss_cls: 0.0061, rpn_loss_box: 0.0018, loss_cls: 0.0096, loss_box: 0.0106, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4770 / 9220, total loss: 0.0893, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0003, loss_cls: 0.0362, loss_box: 0.0522, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4780 / 9220, total loss: 0.0362, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.0193, loss_box: 0.0161, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4790 / 9220, total loss: 0.0402, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0291, loss_box: 0.0104, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4800 / 9220, total loss: 0.0986, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0010, loss_cls: 0.0768, loss_box: 0.0200, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4810 / 9220, total loss: 0.0236, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0157, loss_box: 0.0078, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4820 / 9220, total loss: 0.0299, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0000, loss_cls: 0.0171, loss_box: 0.0127, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4830 / 9220, total loss: 0.0785, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0007, loss_cls: 0.0542, loss_box: 0.0236, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4840 / 9220, total loss: 0.0777, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0015, loss_cls: 0.0428, loss_box: 0.0333, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4850 / 9220, total loss: 0.1429, rpn_loss_cls: 0.0043, rpn_loss_box: 0.0021, loss_cls: 0.0733, loss_box: 0.0632, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4860 / 9220, total loss: 0.1341, rpn_loss_cls: 0.0076, rpn_loss_box: 0.0013, loss_cls: 0.0968, loss_box: 0.0285, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4870 / 9220, total loss: 0.0224, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.0037, loss_box: 0.0178, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4880 / 9220, total loss: 0.2376, rpn_loss_cls: 0.0464, rpn_loss_box: 0.0012, loss_cls: 0.0993, loss_box: 0.0906, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4890 / 9220, total loss: 0.0308, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0007, loss_cls: 0.0112, loss_box: 0.0188, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4900 / 9220, total loss: 0.0516, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0296, loss_box: 0.0217, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4910 / 9220, total loss: 0.1731, rpn_loss_cls: 0.0073, rpn_loss_box: 0.0004, loss_cls: 0.1167, loss_box: 0.0487, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4920 / 9220, total loss: 0.0219, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0018, loss_box: 0.0195, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4930 / 9220, total loss: 0.0917, rpn_loss_cls: 0.0030, rpn_loss_box: 0.0002, loss_cls: 0.0269, loss_box: 0.0615, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4940 / 9220, total loss: 0.1339, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0012, loss_cls: 0.0825, loss_box: 0.0498, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4950 / 9220, total loss: 0.0704, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0616, loss_box: 0.0084, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4960 / 9220, total loss: 0.1502, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.1229, loss_box: 0.0270, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4970 / 9220, total loss: 0.0248, rpn_loss_cls: 0.0105, rpn_loss_box: 0.0001, loss_cls: 0.0102, loss_box: 0.0040, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4980 / 9220, total loss: 0.0518, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0169, loss_box: 0.0345, lr: 0.001000
+speed: 0.107s / iter.
+iter: 4990 / 9220, total loss: 0.0634, rpn_loss_cls: 0.0051, rpn_loss_box: 0.0021, loss_cls: 0.0145, loss_box: 0.0417, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5000 / 9220, total loss: 0.1601, rpn_loss_cls: 0.0130, rpn_loss_box: 0.0073, loss_cls: 0.0702, loss_box: 0.0696, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5010 / 9220, total loss: 0.0636, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0009, loss_cls: 0.0114, loss_box: 0.0511, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5020 / 9220, total loss: 0.0179, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0024, loss_box: 0.0153, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5030 / 9220, total loss: 0.1217, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0012, loss_cls: 0.0882, loss_box: 0.0321, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5040 / 9220, total loss: 0.3816, rpn_loss_cls: 0.0098, rpn_loss_box: 0.0291, loss_cls: 0.2906, loss_box: 0.0520, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5050 / 9220, total loss: 0.1261, rpn_loss_cls: 0.0329, rpn_loss_box: 0.0016, loss_cls: 0.0612, loss_box: 0.0304, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5060 / 9220, total loss: 0.0182, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0052, loss_box: 0.0129, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5070 / 9220, total loss: 0.0257, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0051, loss_box: 0.0201, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5080 / 9220, total loss: 0.1178, rpn_loss_cls: 0.0092, rpn_loss_box: 0.0479, loss_cls: 0.0241, loss_box: 0.0366, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5090 / 9220, total loss: 0.2675, rpn_loss_cls: 0.0332, rpn_loss_box: 0.0231, loss_cls: 0.0757, loss_box: 0.1355, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5100 / 9220, total loss: 0.0973, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0010, loss_cls: 0.0587, loss_box: 0.0368, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5110 / 9220, total loss: 0.0713, rpn_loss_cls: 0.0037, rpn_loss_box: 0.0077, loss_cls: 0.0055, loss_box: 0.0544, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5120 / 9220, total loss: 0.0087, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0023, loss_box: 0.0060, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5130 / 9220, total loss: 0.0978, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.0483, loss_box: 0.0489, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5140 / 9220, total loss: 0.1402, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0038, loss_cls: 0.0870, loss_box: 0.0477, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5150 / 9220, total loss: 0.4254, rpn_loss_cls: 0.0065, rpn_loss_box: 0.0030, loss_cls: 0.3480, loss_box: 0.0679, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5160 / 9220, total loss: 0.0447, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0009, loss_cls: 0.0055, loss_box: 0.0372, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5170 / 9220, total loss: 0.0733, rpn_loss_cls: 0.0049, rpn_loss_box: 0.0018, loss_cls: 0.0497, loss_box: 0.0168, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5180 / 9220, total loss: 0.0842, rpn_loss_cls: 0.0039, rpn_loss_box: 0.0111, loss_cls: 0.0280, loss_box: 0.0413, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5190 / 9220, total loss: 0.0713, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0029, loss_box: 0.0679, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5200 / 9220, total loss: 0.1009, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0405, loss_box: 0.0599, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5210 / 9220, total loss: 0.0219, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0007, loss_box: 0.0209, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5220 / 9220, total loss: 0.1466, rpn_loss_cls: 0.0138, rpn_loss_box: 0.0015, loss_cls: 0.1049, loss_box: 0.0265, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5230 / 9220, total loss: 0.0642, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0119, loss_cls: 0.0340, loss_box: 0.0169, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5240 / 9220, total loss: 0.1720, rpn_loss_cls: 0.0135, rpn_loss_box: 0.0024, loss_cls: 0.1398, loss_box: 0.0163, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5250 / 9220, total loss: 0.0093, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0007, loss_box: 0.0085, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5260 / 9220, total loss: 0.3986, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0035, loss_cls: 0.3486, loss_box: 0.0455, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5270 / 9220, total loss: 0.2059, rpn_loss_cls: 0.0372, rpn_loss_box: 0.0032, loss_cls: 0.1347, loss_box: 0.0307, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5280 / 9220, total loss: 0.2252, rpn_loss_cls: 0.0228, rpn_loss_box: 0.0012, loss_cls: 0.1303, loss_box: 0.0710, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5290 / 9220, total loss: 0.0969, rpn_loss_cls: 0.0042, rpn_loss_box: 0.0006, loss_cls: 0.0741, loss_box: 0.0181, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5300 / 9220, total loss: 0.1617, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0004, loss_cls: 0.1363, loss_box: 0.0250, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5310 / 9220, total loss: 0.0507, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0406, loss_box: 0.0098, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5320 / 9220, total loss: 0.0922, rpn_loss_cls: 0.0029, rpn_loss_box: 0.0006, loss_cls: 0.0415, loss_box: 0.0472, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5330 / 9220, total loss: 0.2028, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0009, loss_cls: 0.1907, loss_box: 0.0106, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5340 / 9220, total loss: 0.0399, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0247, loss_box: 0.0150, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5350 / 9220, total loss: 0.1296, rpn_loss_cls: 0.0154, rpn_loss_box: 0.0005, loss_cls: 0.0951, loss_box: 0.0186, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5360 / 9220, total loss: 0.1947, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0008, loss_cls: 0.1772, loss_box: 0.0165, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5370 / 9220, total loss: 0.0899, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0008, loss_cls: 0.0597, loss_box: 0.0290, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5380 / 9220, total loss: 0.0657, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0016, loss_cls: 0.0482, loss_box: 0.0157, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5390 / 9220, total loss: 0.0697, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0237, loss_box: 0.0457, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5400 / 9220, total loss: 0.1397, rpn_loss_cls: 0.0091, rpn_loss_box: 0.0021, loss_cls: 0.0955, loss_box: 0.0329, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5410 / 9220, total loss: 0.0548, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0009, loss_cls: 0.0333, loss_box: 0.0206, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5420 / 9220, total loss: 0.0573, rpn_loss_cls: 0.0031, rpn_loss_box: 0.0035, loss_cls: 0.0333, loss_box: 0.0175, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5430 / 9220, total loss: 0.1003, rpn_loss_cls: 0.0033, rpn_loss_box: 0.0009, loss_cls: 0.0723, loss_box: 0.0238, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5440 / 9220, total loss: 0.0909, rpn_loss_cls: 0.0087, rpn_loss_box: 0.0107, loss_cls: 0.0411, loss_box: 0.0304, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5450 / 9220, total loss: 0.0234, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0096, loss_box: 0.0135, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5460 / 9220, total loss: 0.0122, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0025, loss_box: 0.0094, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5470 / 9220, total loss: 0.1247, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0702, loss_box: 0.0543, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5480 / 9220, total loss: 0.0575, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0274, loss_cls: 0.0145, loss_box: 0.0141, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5490 / 9220, total loss: 0.0298, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0003, loss_cls: 0.0169, loss_box: 0.0122, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5500 / 9220, total loss: 0.1210, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0003, loss_cls: 0.0781, loss_box: 0.0419, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5510 / 9220, total loss: 0.0510, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0003, loss_cls: 0.0106, loss_box: 0.0387, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5520 / 9220, total loss: 0.0871, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0056, loss_cls: 0.0364, loss_box: 0.0433, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5530 / 9220, total loss: 0.0091, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0012, loss_box: 0.0078, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5540 / 9220, total loss: 0.0281, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0039, loss_box: 0.0237, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5550 / 9220, total loss: 0.0778, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0023, loss_cls: 0.0314, loss_box: 0.0434, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5560 / 9220, total loss: 0.0132, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0006, loss_box: 0.0121, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5570 / 9220, total loss: 0.0216, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0011, loss_box: 0.0201, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5580 / 9220, total loss: 0.1346, rpn_loss_cls: 0.0062, rpn_loss_box: 0.0034, loss_cls: 0.0809, loss_box: 0.0441, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5590 / 9220, total loss: 0.0867, rpn_loss_cls: 0.0036, rpn_loss_box: 0.0101, loss_cls: 0.0216, loss_box: 0.0514, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5600 / 9220, total loss: 0.1082, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0010, loss_cls: 0.0278, loss_box: 0.0794, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5610 / 9220, total loss: 0.0534, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.0347, loss_box: 0.0183, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5620 / 9220, total loss: 0.0851, rpn_loss_cls: 0.0031, rpn_loss_box: 0.0086, loss_cls: 0.0300, loss_box: 0.0435, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5630 / 9220, total loss: 0.0248, rpn_loss_cls: 0.0050, rpn_loss_box: 0.0006, loss_cls: 0.0068, loss_box: 0.0123, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5640 / 9220, total loss: 0.0678, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0009, loss_cls: 0.0515, loss_box: 0.0153, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5650 / 9220, total loss: 0.0198, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0002, loss_cls: 0.0059, loss_box: 0.0133, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5660 / 9220, total loss: 0.1971, rpn_loss_cls: 0.0012, rpn_loss_box: 0.0019, loss_cls: 0.1689, loss_box: 0.0250, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5670 / 9220, total loss: 0.0656, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0017, loss_cls: 0.0348, loss_box: 0.0270, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5680 / 9220, total loss: 0.2564, rpn_loss_cls: 0.0076, rpn_loss_box: 0.0008, loss_cls: 0.2191, loss_box: 0.0289, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5690 / 9220, total loss: 0.0309, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0018, loss_cls: 0.0184, loss_box: 0.0087, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5700 / 9220, total loss: 0.1324, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0055, loss_cls: 0.0598, loss_box: 0.0663, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5710 / 9220, total loss: 0.2259, rpn_loss_cls: 0.0051, rpn_loss_box: 0.0035, loss_cls: 0.1714, loss_box: 0.0459, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5720 / 9220, total loss: 0.1102, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0032, loss_cls: 0.0819, loss_box: 0.0243, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5730 / 9220, total loss: 0.1128, rpn_loss_cls: 0.0088, rpn_loss_box: 0.0010, loss_cls: 0.0424, loss_box: 0.0606, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5740 / 9220, total loss: 0.0928, rpn_loss_cls: 0.0095, rpn_loss_box: 0.0111, loss_cls: 0.0261, loss_box: 0.0461, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5750 / 9220, total loss: 0.2166, rpn_loss_cls: 0.0116, rpn_loss_box: 0.0043, loss_cls: 0.1251, loss_box: 0.0756, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5760 / 9220, total loss: 0.0902, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0014, loss_cls: 0.0621, loss_box: 0.0266, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5770 / 9220, total loss: 0.0355, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0011, loss_cls: 0.0282, loss_box: 0.0048, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5780 / 9220, total loss: 0.1001, rpn_loss_cls: 0.0096, rpn_loss_box: 0.0060, loss_cls: 0.0468, loss_box: 0.0377, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5790 / 9220, total loss: 0.1774, rpn_loss_cls: 0.0163, rpn_loss_box: 0.0015, loss_cls: 0.1269, loss_box: 0.0327, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5800 / 9220, total loss: 0.0595, rpn_loss_cls: 0.0042, rpn_loss_box: 0.0062, loss_cls: 0.0390, loss_box: 0.0100, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5810 / 9220, total loss: 0.0296, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0006, loss_box: 0.0287, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5820 / 9220, total loss: 0.1068, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0006, loss_cls: 0.0849, loss_box: 0.0206, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5830 / 9220, total loss: 0.0713, rpn_loss_cls: 0.0246, rpn_loss_box: 0.0057, loss_cls: 0.0254, loss_box: 0.0156, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5840 / 9220, total loss: 0.0428, rpn_loss_cls: 0.0120, rpn_loss_box: 0.0001, loss_cls: 0.0169, loss_box: 0.0139, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5850 / 9220, total loss: 0.0550, rpn_loss_cls: 0.0041, rpn_loss_box: 0.0011, loss_cls: 0.0349, loss_box: 0.0149, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5860 / 9220, total loss: 0.0567, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0216, loss_box: 0.0348, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5870 / 9220, total loss: 0.1076, rpn_loss_cls: 0.0043, rpn_loss_box: 0.0072, loss_cls: 0.0679, loss_box: 0.0282, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5880 / 9220, total loss: 0.0721, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0009, loss_cls: 0.0084, loss_box: 0.0618, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5890 / 9220, total loss: 0.0508, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0343, loss_box: 0.0162, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5900 / 9220, total loss: 0.0775, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0006, loss_cls: 0.0427, loss_box: 0.0303, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5910 / 9220, total loss: 0.1852, rpn_loss_cls: 0.0289, rpn_loss_box: 0.0022, loss_cls: 0.0713, loss_box: 0.0828, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5920 / 9220, total loss: 0.1355, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0325, loss_box: 0.1024, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5930 / 9220, total loss: 0.0727, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0008, loss_cls: 0.0135, loss_box: 0.0576, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5940 / 9220, total loss: 0.0178, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0005, loss_box: 0.0172, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5950 / 9220, total loss: 0.1217, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0001, loss_cls: 0.0635, loss_box: 0.0576, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5960 / 9220, total loss: 0.1330, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0003, loss_cls: 0.1221, loss_box: 0.0098, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5970 / 9220, total loss: 0.0291, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0063, loss_box: 0.0225, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5980 / 9220, total loss: 0.0539, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0019, loss_cls: 0.0013, loss_box: 0.0506, lr: 0.001000
+speed: 0.107s / iter.
+iter: 5990 / 9220, total loss: 0.0886, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0551, loss_box: 0.0332, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6000 / 9220, total loss: 0.1125, rpn_loss_cls: 0.0087, rpn_loss_box: 0.0026, loss_cls: 0.0372, loss_box: 0.0639, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6010 / 9220, total loss: 0.1583, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0008, loss_cls: 0.1174, loss_box: 0.0396, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6020 / 9220, total loss: 0.0602, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0008, loss_cls: 0.0294, loss_box: 0.0289, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6030 / 9220, total loss: 0.0076, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0004, loss_box: 0.0070, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6040 / 9220, total loss: 0.0334, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0004, loss_cls: 0.0166, loss_box: 0.0148, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6050 / 9220, total loss: 0.0230, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0038, loss_box: 0.0187, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6060 / 9220, total loss: 0.0835, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0004, loss_cls: 0.0535, loss_box: 0.0292, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6070 / 9220, total loss: 0.0648, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0008, loss_cls: 0.0327, loss_box: 0.0309, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6080 / 9220, total loss: 0.1570, rpn_loss_cls: 0.0105, rpn_loss_box: 0.0246, loss_cls: 0.0820, loss_box: 0.0399, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6090 / 9220, total loss: 0.0362, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0134, loss_box: 0.0222, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6100 / 9220, total loss: 0.0090, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0008, loss_box: 0.0078, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6110 / 9220, total loss: 0.0546, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0024, loss_cls: 0.0332, loss_box: 0.0168, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6120 / 9220, total loss: 0.0178, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0023, loss_box: 0.0151, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6130 / 9220, total loss: 0.1315, rpn_loss_cls: 0.0267, rpn_loss_box: 0.0008, loss_cls: 0.0452, loss_box: 0.0588, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6140 / 9220, total loss: 0.0474, rpn_loss_cls: 0.0052, rpn_loss_box: 0.0082, loss_cls: 0.0145, loss_box: 0.0194, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6150 / 9220, total loss: 0.2167, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0005, loss_cls: 0.1814, loss_box: 0.0346, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6160 / 9220, total loss: 0.0729, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0051, loss_cls: 0.0456, loss_box: 0.0212, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6170 / 9220, total loss: 0.0131, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0045, loss_box: 0.0084, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6180 / 9220, total loss: 0.0509, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0009, loss_cls: 0.0335, loss_box: 0.0150, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6190 / 9220, total loss: 0.1012, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0699, loss_box: 0.0311, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6200 / 9220, total loss: 0.1519, rpn_loss_cls: 0.0241, rpn_loss_box: 0.0012, loss_cls: 0.0763, loss_box: 0.0503, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6210 / 9220, total loss: 0.0505, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0022, loss_cls: 0.0310, loss_box: 0.0170, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6220 / 9220, total loss: 0.0623, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0473, loss_box: 0.0144, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6230 / 9220, total loss: 0.1776, rpn_loss_cls: 0.0034, rpn_loss_box: 0.0017, loss_cls: 0.1383, loss_box: 0.0342, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6240 / 9220, total loss: 0.0823, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0362, loss_box: 0.0458, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6250 / 9220, total loss: 0.0207, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0085, loss_box: 0.0120, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6260 / 9220, total loss: 0.0468, rpn_loss_cls: 0.0037, rpn_loss_box: 0.0003, loss_cls: 0.0308, loss_box: 0.0120, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6270 / 9220, total loss: 0.0613, rpn_loss_cls: 0.0050, rpn_loss_box: 0.0009, loss_cls: 0.0279, loss_box: 0.0275, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6280 / 9220, total loss: 0.0683, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0031, loss_cls: 0.0525, loss_box: 0.0114, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6290 / 9220, total loss: 0.1098, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0024, loss_cls: 0.0827, loss_box: 0.0246, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6300 / 9220, total loss: 0.0396, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0087, loss_box: 0.0307, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6310 / 9220, total loss: 0.0266, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0203, loss_box: 0.0059, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6320 / 9220, total loss: 0.1639, rpn_loss_cls: 0.0033, rpn_loss_box: 0.0051, loss_cls: 0.1441, loss_box: 0.0114, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6330 / 9220, total loss: 0.0771, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0647, loss_box: 0.0123, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6340 / 9220, total loss: 0.4104, rpn_loss_cls: 0.0063, rpn_loss_box: 0.0021, loss_cls: 0.3461, loss_box: 0.0558, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6350 / 9220, total loss: 0.2061, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.1801, loss_box: 0.0259, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6360 / 9220, total loss: 0.0988, rpn_loss_cls: 0.0024, rpn_loss_box: 0.0013, loss_cls: 0.0429, loss_box: 0.0523, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6370 / 9220, total loss: 0.2215, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0003, loss_cls: 0.1899, loss_box: 0.0292, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6380 / 9220, total loss: 0.0680, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0008, loss_cls: 0.0389, loss_box: 0.0261, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6390 / 9220, total loss: 0.0972, rpn_loss_cls: 0.0031, rpn_loss_box: 0.0007, loss_cls: 0.0766, loss_box: 0.0168, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6400 / 9220, total loss: 0.6092, rpn_loss_cls: 0.0235, rpn_loss_box: 0.0005, loss_cls: 0.4243, loss_box: 0.1610, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6410 / 9220, total loss: 0.3077, rpn_loss_cls: 0.0144, rpn_loss_box: 0.0120, loss_cls: 0.1381, loss_box: 0.1431, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6420 / 9220, total loss: 0.1009, rpn_loss_cls: 0.0019, rpn_loss_box: 0.0006, loss_cls: 0.0692, loss_box: 0.0291, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6430 / 9220, total loss: 0.0814, rpn_loss_cls: 0.0024, rpn_loss_box: 0.0006, loss_cls: 0.0394, loss_box: 0.0391, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6440 / 9220, total loss: 0.0411, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0002, loss_cls: 0.0019, loss_box: 0.0381, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6450 / 9220, total loss: 0.0733, rpn_loss_cls: 0.0148, rpn_loss_box: 0.0003, loss_cls: 0.0342, loss_box: 0.0241, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6460 / 9220, total loss: 0.0174, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0020, loss_box: 0.0152, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6470 / 9220, total loss: 0.0710, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0007, loss_cls: 0.0286, loss_box: 0.0411, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6480 / 9220, total loss: 0.0945, rpn_loss_cls: 0.0043, rpn_loss_box: 0.0108, loss_cls: 0.0315, loss_box: 0.0478, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6490 / 9220, total loss: 0.6621, rpn_loss_cls: 0.0387, rpn_loss_box: 0.0121, loss_cls: 0.5133, loss_box: 0.0980, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6500 / 9220, total loss: 0.0421, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0113, loss_box: 0.0306, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6510 / 9220, total loss: 0.0745, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0017, loss_cls: 0.0252, loss_box: 0.0473, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6520 / 9220, total loss: 0.1947, rpn_loss_cls: 0.0101, rpn_loss_box: 0.0070, loss_cls: 0.1373, loss_box: 0.0403, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6530 / 9220, total loss: 0.0173, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0000, loss_cls: 0.0062, loss_box: 0.0110, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6540 / 9220, total loss: 0.0686, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0007, loss_cls: 0.0425, loss_box: 0.0246, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6550 / 9220, total loss: 0.0537, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0005, loss_cls: 0.0223, loss_box: 0.0307, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6560 / 9220, total loss: 0.4980, rpn_loss_cls: 0.0579, rpn_loss_box: 0.0126, loss_cls: 0.1945, loss_box: 0.2330, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6570 / 9220, total loss: 0.0195, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0114, loss_box: 0.0077, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6580 / 9220, total loss: 0.2880, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0005, loss_cls: 0.2571, loss_box: 0.0300, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6590 / 9220, total loss: 0.0136, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0038, loss_box: 0.0096, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6600 / 9220, total loss: 0.0326, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0106, loss_box: 0.0214, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6610 / 9220, total loss: 0.0736, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0021, loss_cls: 0.0466, loss_box: 0.0237, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6620 / 9220, total loss: 0.0493, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0244, loss_box: 0.0247, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6630 / 9220, total loss: 0.1655, rpn_loss_cls: 0.0176, rpn_loss_box: 0.0011, loss_cls: 0.1307, loss_box: 0.0161, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6640 / 9220, total loss: 0.1865, rpn_loss_cls: 0.0019, rpn_loss_box: 0.0017, loss_cls: 0.0920, loss_box: 0.0909, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6650 / 9220, total loss: 0.1462, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.1056, loss_box: 0.0400, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6660 / 9220, total loss: 0.0379, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0013, loss_cls: 0.0248, loss_box: 0.0110, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6670 / 9220, total loss: 0.0103, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0005, loss_box: 0.0096, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6680 / 9220, total loss: 0.1251, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0002, loss_cls: 0.0947, loss_box: 0.0293, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6690 / 9220, total loss: 0.0902, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0015, loss_cls: 0.0673, loss_box: 0.0203, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6700 / 9220, total loss: 0.0399, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0000, loss_cls: 0.0247, loss_box: 0.0152, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6710 / 9220, total loss: 0.0547, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.0375, loss_box: 0.0168, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6720 / 9220, total loss: 0.0959, rpn_loss_cls: 0.0237, rpn_loss_box: 0.0095, loss_cls: 0.0415, loss_box: 0.0212, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6730 / 9220, total loss: 0.0114, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0055, loss_box: 0.0056, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6740 / 9220, total loss: 0.0173, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0017, loss_box: 0.0153, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6750 / 9220, total loss: 0.1599, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0034, loss_cls: 0.1257, loss_box: 0.0305, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6760 / 9220, total loss: 0.1667, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.1509, loss_box: 0.0150, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6770 / 9220, total loss: 0.0486, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0004, loss_cls: 0.0408, loss_box: 0.0071, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6780 / 9220, total loss: 0.1168, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0010, loss_cls: 0.0851, loss_box: 0.0305, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6790 / 9220, total loss: 0.3610, rpn_loss_cls: 0.0526, rpn_loss_box: 0.0114, loss_cls: 0.2544, loss_box: 0.0426, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6800 / 9220, total loss: 0.0139, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0033, loss_box: 0.0103, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6810 / 9220, total loss: 0.0142, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0031, loss_box: 0.0108, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6820 / 9220, total loss: 0.3184, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0550, loss_cls: 0.1458, loss_box: 0.1166, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6830 / 9220, total loss: 0.0950, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0500, loss_box: 0.0449, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6840 / 9220, total loss: 0.1080, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0007, loss_cls: 0.0622, loss_box: 0.0422, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6850 / 9220, total loss: 0.0428, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0004, loss_cls: 0.0065, loss_box: 0.0357, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6860 / 9220, total loss: 0.1471, rpn_loss_cls: 0.0063, rpn_loss_box: 0.0239, loss_cls: 0.0325, loss_box: 0.0844, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6870 / 9220, total loss: 0.0644, rpn_loss_cls: 0.0093, rpn_loss_box: 0.0024, loss_cls: 0.0204, loss_box: 0.0323, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6880 / 9220, total loss: 0.0270, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0021, loss_box: 0.0246, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6890 / 9220, total loss: 0.0101, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0015, loss_box: 0.0082, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6900 / 9220, total loss: 0.0565, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0008, loss_cls: 0.0439, loss_box: 0.0109, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6910 / 9220, total loss: 0.1236, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0137, loss_cls: 0.0599, loss_box: 0.0475, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6920 / 9220, total loss: 0.3654, rpn_loss_cls: 0.0060, rpn_loss_box: 0.0016, loss_cls: 0.1928, loss_box: 0.1650, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6930 / 9220, total loss: 0.0210, rpn_loss_cls: 0.0023, rpn_loss_box: 0.0005, loss_cls: 0.0065, loss_box: 0.0117, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6940 / 9220, total loss: 0.0770, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0001, loss_cls: 0.0463, loss_box: 0.0302, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6950 / 9220, total loss: 0.0947, rpn_loss_cls: 0.0056, rpn_loss_box: 0.0048, loss_cls: 0.0652, loss_box: 0.0191, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6960 / 9220, total loss: 0.0728, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0018, loss_cls: 0.0430, loss_box: 0.0279, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6970 / 9220, total loss: 0.1203, rpn_loss_cls: 0.0041, rpn_loss_box: 0.0010, loss_cls: 0.0275, loss_box: 0.0878, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6980 / 9220, total loss: 0.0247, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0004, loss_cls: 0.0042, loss_box: 0.0199, lr: 0.001000
+speed: 0.107s / iter.
+iter: 6990 / 9220, total loss: 0.0761, rpn_loss_cls: 0.0110, rpn_loss_box: 0.0006, loss_cls: 0.0471, loss_box: 0.0174, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7000 / 9220, total loss: 0.0365, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0006, loss_cls: 0.0127, loss_box: 0.0218, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7010 / 9220, total loss: 0.0496, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0353, loss_box: 0.0139, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7020 / 9220, total loss: 0.1343, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0034, loss_cls: 0.1124, loss_box: 0.0184, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7030 / 9220, total loss: 0.0211, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0047, loss_box: 0.0161, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7040 / 9220, total loss: 0.0274, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0005, loss_cls: 0.0169, loss_box: 0.0096, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7050 / 9220, total loss: 0.0771, rpn_loss_cls: 0.0118, rpn_loss_box: 0.0093, loss_cls: 0.0427, loss_box: 0.0134, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7060 / 9220, total loss: 0.0094, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0041, loss_box: 0.0051, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7070 / 9220, total loss: 0.0247, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0044, loss_box: 0.0202, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7080 / 9220, total loss: 0.0460, rpn_loss_cls: 0.0111, rpn_loss_box: 0.0000, loss_cls: 0.0317, loss_box: 0.0031, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7090 / 9220, total loss: 0.0103, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0009, loss_box: 0.0092, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7100 / 9220, total loss: 0.1149, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0003, loss_cls: 0.0840, loss_box: 0.0301, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7110 / 9220, total loss: 0.0252, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0005, loss_cls: 0.0086, loss_box: 0.0158, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7120 / 9220, total loss: 0.1384, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0004, loss_cls: 0.0931, loss_box: 0.0428, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7130 / 9220, total loss: 0.0333, rpn_loss_cls: 0.0064, rpn_loss_box: 0.0027, loss_cls: 0.0090, loss_box: 0.0153, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7140 / 9220, total loss: 0.0460, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0053, loss_cls: 0.0148, loss_box: 0.0252, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7150 / 9220, total loss: 0.0730, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0012, loss_cls: 0.0123, loss_box: 0.0593, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7160 / 9220, total loss: 0.2239, rpn_loss_cls: 0.0091, rpn_loss_box: 0.0018, loss_cls: 0.1760, loss_box: 0.0370, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7170 / 9220, total loss: 0.0592, rpn_loss_cls: 0.0027, rpn_loss_box: 0.0050, loss_cls: 0.0344, loss_box: 0.0171, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7180 / 9220, total loss: 0.1613, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0027, loss_cls: 0.1323, loss_box: 0.0255, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7190 / 9220, total loss: 0.0571, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0001, loss_cls: 0.0024, loss_box: 0.0540, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7200 / 9220, total loss: 0.0911, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0005, loss_cls: 0.0661, loss_box: 0.0232, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7210 / 9220, total loss: 0.1456, rpn_loss_cls: 0.0229, rpn_loss_box: 0.0006, loss_cls: 0.0432, loss_box: 0.0789, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7220 / 9220, total loss: 0.3675, rpn_loss_cls: 0.0582, rpn_loss_box: 0.0108, loss_cls: 0.2155, loss_box: 0.0831, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7230 / 9220, total loss: 0.0525, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0008, loss_cls: 0.0180, loss_box: 0.0328, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7240 / 9220, total loss: 0.0818, rpn_loss_cls: 0.0032, rpn_loss_box: 0.0229, loss_cls: 0.0131, loss_box: 0.0426, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7250 / 9220, total loss: 0.0268, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0066, loss_cls: 0.0010, loss_box: 0.0188, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7260 / 9220, total loss: 0.0580, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0123, loss_box: 0.0453, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7270 / 9220, total loss: 0.1803, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0020, loss_cls: 0.1445, loss_box: 0.0320, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7280 / 9220, total loss: 0.0352, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0105, loss_box: 0.0244, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7290 / 9220, total loss: 0.2115, rpn_loss_cls: 0.0187, rpn_loss_box: 0.0030, loss_cls: 0.1250, loss_box: 0.0648, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7300 / 9220, total loss: 0.0492, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0009, loss_cls: 0.0173, loss_box: 0.0297, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7310 / 9220, total loss: 0.0654, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0008, loss_cls: 0.0383, loss_box: 0.0260, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7320 / 9220, total loss: 0.0265, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0001, loss_cls: 0.0124, loss_box: 0.0130, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7330 / 9220, total loss: 0.1542, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0003, loss_cls: 0.1258, loss_box: 0.0278, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7340 / 9220, total loss: 0.0283, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0004, loss_cls: 0.0116, loss_box: 0.0135, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7350 / 9220, total loss: 0.0193, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0064, loss_box: 0.0125, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7360 / 9220, total loss: 0.1346, rpn_loss_cls: 0.0045, rpn_loss_box: 0.0011, loss_cls: 0.0737, loss_box: 0.0552, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7370 / 9220, total loss: 0.0305, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0002, loss_cls: 0.0065, loss_box: 0.0224, lr: 0.001000
+speed: 0.107s / iter.
+iter: 7380 / 9220, total loss: 0.1547, rpn_loss_cls: 0.0053, rpn_loss_box: 0.0060, loss_cls: 0.1141, loss_box: 0.0294, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ120055.2+032655_infraredctmask, 0.3263
+Culprit found FIRSTJ115825.0+271630_infraredctmask, 0.3065
+iter: 7390 / 9220, total loss: 0.0774, rpn_loss_cls: 0.0130, rpn_loss_box: 0.0010, loss_cls: 0.0533, loss_box: 0.0100, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ130920.2+071234_infraredctmask, 0.2414
+iter: 7400 / 9220, total loss: 0.1151, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0003, loss_cls: 0.0758, loss_box: 0.0387, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ085349.8+145225_infraredctmask, 0.2309
+Culprit found FIRSTJ152847.9+500745_infraredctmask, 0.2407
+Culprit found FIRSTJ154406.1+122406_infraredctmask, 0.3400
+iter: 7410 / 9220, total loss: 0.0568, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0132, loss_cls: 0.0139, loss_box: 0.0293, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ165755.4+232223_infraredctmask, 0.3209
+Culprit found FIRSTJ122951.6+114042_infraredctmask, 0.2034
+iter: 7420 / 9220, total loss: 0.0612, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0010, loss_cls: 0.0419, loss_box: 0.0168, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ150638.9+424547_infraredctmask, 0.3091
+iter: 7430 / 9220, total loss: 0.0722, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0588, loss_box: 0.0131, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ074652.4+333957_infraredctmask, 0.3252
+Culprit found FIRSTJ154246.5+194626_infraredctmask, 0.2719
+Culprit found FIRSTJ152736.7+182226_infraredctmask, 0.2629
+Culprit found FIRSTJ171223.0+611531_infraredctmask, 0.2349
+iter: 7440 / 9220, total loss: 0.0477, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0005, loss_cls: 0.0323, loss_box: 0.0133, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ143210.6+052549_infraredctmask, 0.3233
+iter: 7450 / 9220, total loss: 0.0544, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0112, loss_box: 0.0430, lr: 0.001000
+speed: 0.107s / iter.
+Culprit found FIRSTJ120839.0+054829_infraredctmask, 0.2066
+iter: 7460 / 9220, total loss: 0.2194, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0011, loss_cls: 0.1653, loss_box: 0.0524, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ101641.3+244704_infraredctmask, 0.2194
+iter: 7470 / 9220, total loss: 0.3173, rpn_loss_cls: 0.0068, rpn_loss_box: 0.0027, loss_cls: 0.2636, loss_box: 0.0442, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ081949.8+025024_infraredctmask, 0.3173
+Culprit found FIRSTJ155723.0+543950_infraredctmask, 0.2308
+Culprit found FIRSTJ105449.0+343852_infraredctmask, 0.2089
+Culprit found FIRSTJ082515.6+263140_infraredctmask, 0.2790
+iter: 7480 / 9220, total loss: 0.0784, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0005, loss_cls: 0.0635, loss_box: 0.0142, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ120034.1+500658_infraredctmask, 0.2582
+Culprit found FIRSTJ072309.5+321006_infraredctmask, 0.4207
+Culprit found FIRSTJ134944.1+105835_infraredctmask, 0.3421
+Culprit found FIRSTJ132551.2+052654_infraredctmask, 0.4994
+iter: 7490 / 9220, total loss: 0.0160, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0024, loss_box: 0.0132, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ153713.7+383604_infraredctmask, 0.2350
+iter: 7500 / 9220, total loss: 0.0595, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0139, loss_cls: 0.0034, loss_box: 0.0413, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ002318.2+021247_infraredctmask, 0.3162
+Culprit found FIRSTJ071149.0+572822_infraredctmask, 0.3100
+Culprit found FIRSTJ001737.4+082745_infraredctmask, 0.3672
+iter: 7510 / 9220, total loss: 0.1133, rpn_loss_cls: 0.0177, rpn_loss_box: 0.0004, loss_cls: 0.0708, loss_box: 0.0243, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ162045.8+430921_infraredctmask, 0.2014
+Culprit found FIRSTJ004300.3+110543_infraredctmask, 0.3761
+iter: 7520 / 9220, total loss: 0.0695, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0016, loss_cls: 0.0531, loss_box: 0.0146, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ113004.9+154124_infraredctmask, 0.2011
+iter: 7530 / 9220, total loss: 0.0734, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0008, loss_cls: 0.0155, loss_box: 0.0568, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ135519.7+292543_infraredctmask, 0.3239
+Culprit found FIRSTJ171036.8+214700_infraredctmask, 0.2285
+iter: 7540 / 9220, total loss: 0.0375, rpn_loss_cls: 0.0048, rpn_loss_box: 0.0001, loss_cls: 0.0181, loss_box: 0.0145, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ144925.6+080208_infraredctmask, 0.3576
+Culprit found FIRSTJ002112.8+115217_infraredctmask, 0.3119
+Culprit found FIRSTJ115417.6+161138_infraredctmask, 0.2698
+iter: 7550 / 9220, total loss: 0.2547, rpn_loss_cls: 0.0149, rpn_loss_box: 0.0071, loss_cls: 0.1912, loss_box: 0.0415, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ163414.3+070006_infraredctmask, 0.2547
+iter: 7560 / 9220, total loss: 0.1817, rpn_loss_cls: 0.0081, rpn_loss_box: 0.0009, loss_cls: 0.1441, loss_box: 0.0286, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112445.7+401402_infraredctmask, 0.2445
+Culprit found FIRSTJ141753.6+500815_infraredctmask, 0.2049
+iter: 7570 / 9220, total loss: 0.0319, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0008, loss_cls: 0.0179, loss_box: 0.0127, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ104059.3+265501_infraredctmask, 0.3359
+Culprit found FIRSTJ005541.8+015744_infraredctmask, 0.2160
+Culprit found FIRSTJ125058.8+463253_infraredctmask, 0.4093
+iter: 7580 / 9220, total loss: 0.1055, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.1023, loss_box: 0.0031, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ114342.9+513424_infraredctmask, 0.2149
+Culprit found FIRSTJ142121.6+485532_infraredctmask, 0.2220
+Culprit found FIRSTJ171009.9+500256_infraredctmask, 0.2308
+iter: 7590 / 9220, total loss: 0.0549, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0016, loss_cls: 0.0103, loss_box: 0.0430, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ153716.8+050325_infraredctmask, 0.2057
+Culprit found FIRSTJ212104.5+030206_infraredctmask, 0.2537
+iter: 7600 / 9220, total loss: 0.1381, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0003, loss_cls: 0.0943, loss_box: 0.0394, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ160621.4+360545_infraredctmask, 0.2739
+Culprit found FIRSTJ112042.0+291310_infraredctmask, 0.5290
+iter: 7610 / 9220, total loss: 0.0358, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0012, loss_cls: 0.0043, loss_box: 0.0289, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ124322.9+085949_infraredctmask, 0.2147
+iter: 7620 / 9220, total loss: 0.1387, rpn_loss_cls: 0.0503, rpn_loss_box: 0.0034, loss_cls: 0.0472, loss_box: 0.0379, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7630 / 9220, total loss: 0.0327, rpn_loss_cls: 0.0032, rpn_loss_box: 0.0047, loss_cls: 0.0105, loss_box: 0.0143, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ172056.5+333344_infraredctmask, 0.6674
+iter: 7640 / 9220, total loss: 0.0264, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0001, loss_cls: 0.0020, loss_box: 0.0240, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ161152.0+202010_infraredctmask, 0.3404
+iter: 7650 / 9220, total loss: 0.1005, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0002, loss_cls: 0.0786, loss_box: 0.0209, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7660 / 9220, total loss: 0.2463, rpn_loss_cls: 0.0105, rpn_loss_box: 0.0094, loss_cls: 0.1948, loss_box: 0.0317, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ124919.4+500458_infraredctmask, 0.2463
+Culprit found FIRSTJ123244.2+123411_infraredctmask, 0.2215
+iter: 7670 / 9220, total loss: 0.1094, rpn_loss_cls: 0.0017, rpn_loss_box: 0.0020, loss_cls: 0.0770, loss_box: 0.0286, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102601.8+605859_infraredctmask, 0.2173
+iter: 7680 / 9220, total loss: 0.0252, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0004, loss_cls: 0.0025, loss_box: 0.0214, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ111904.2+385938_infraredctmask, 0.2197
+iter: 7690 / 9220, total loss: 0.0078, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0012, loss_box: 0.0062, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7700 / 9220, total loss: 0.0501, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0042, loss_cls: 0.0355, loss_box: 0.0089, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ091713.6+144817_infraredctmask, 0.4062
+Culprit found FIRSTJ145049.7+432923_infraredctmask, 0.3837
+Culprit found FIRSTJ085525.6+280438_infraredctmask, 0.3287
+Culprit found FIRSTJ144223.4+223636_infraredctmask, 0.2374
+iter: 7710 / 9220, total loss: 0.0358, rpn_loss_cls: 0.0120, rpn_loss_box: 0.0004, loss_cls: 0.0090, loss_box: 0.0145, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7720 / 9220, total loss: 0.1761, rpn_loss_cls: 0.0322, rpn_loss_box: 0.0010, loss_cls: 0.0751, loss_box: 0.0678, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7730 / 9220, total loss: 0.0419, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0195, loss_box: 0.0221, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ151526.1+391517_infraredctmask, 0.4782
+Culprit found FIRSTJ231920.5+100617_infraredctmask, 0.2019
+iter: 7740 / 9220, total loss: 0.1299, rpn_loss_cls: 0.0080, rpn_loss_box: 0.0147, loss_cls: 0.0867, loss_box: 0.0206, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ142019.7+125722_infraredctmask, 0.2092
+iter: 7750 / 9220, total loss: 0.0328, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0016, loss_box: 0.0309, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ155643.7+351417_infraredctmask, 0.3207
+iter: 7760 / 9220, total loss: 0.0282, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0006, loss_cls: 0.0020, loss_box: 0.0255, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ210124.0+091325_infraredctmask, 0.3272
+iter: 7770 / 9220, total loss: 0.0743, rpn_loss_cls: 0.0068, rpn_loss_box: 0.0035, loss_cls: 0.0356, loss_box: 0.0284, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ151851.6+341114_infraredctmask, 0.2132
+Culprit found FIRSTJ112229.6+180526_infraredctmask, 0.2552
+iter: 7780 / 9220, total loss: 0.0416, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0009, loss_cls: 0.0071, loss_box: 0.0335, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ171129.2+345935_infraredctmask, 0.2177
+iter: 7790 / 9220, total loss: 0.0288, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0014, loss_box: 0.0271, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ123604.5+103449_infraredctmask, 0.2417
+iter: 7800 / 9220, total loss: 0.2055, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0041, loss_cls: 0.1785, loss_box: 0.0218, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102142.0+161855_infraredctmask, 0.2055
+iter: 7810 / 9220, total loss: 0.1254, rpn_loss_cls: 0.0064, rpn_loss_box: 0.0082, loss_cls: 0.0670, loss_box: 0.0439, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ152304.2+093938_infraredctmask, 0.2037
+Culprit found FIRSTJ121155.8+281444_infraredctmask, 0.2119
+iter: 7820 / 9220, total loss: 0.1175, rpn_loss_cls: 0.0126, rpn_loss_box: 0.0040, loss_cls: 0.0715, loss_box: 0.0294, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ143658.6+235147_infraredctmask, 0.2203
+iter: 7830 / 9220, total loss: 0.1131, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0198, loss_cls: 0.0583, loss_box: 0.0346, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ143628.8+304031_infraredctmask, 0.5212
+iter: 7840 / 9220, total loss: 0.0135, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0005, loss_cls: 0.0006, loss_box: 0.0121, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ162731.6+505227_infraredctmask, 0.3423
+Culprit found FIRSTJ004300.3+110543_infraredctmask, 0.3200
+Culprit found FIRSTJ213311.1+110241_infraredctmask, 0.2051
+iter: 7850 / 9220, total loss: 0.0694, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0028, loss_cls: 0.0182, loss_box: 0.0479, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ114119.9+540842_infraredctmask, 0.2078
+iter: 7860 / 9220, total loss: 0.1051, rpn_loss_cls: 0.0176, rpn_loss_box: 0.0092, loss_cls: 0.0513, loss_box: 0.0270, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ113714.1+310616_infraredctmask, 0.2098
+iter: 7870 / 9220, total loss: 0.1016, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0093, loss_cls: 0.0657, loss_box: 0.0231, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ141957.1+111523_infraredctmask, 0.2252
+iter: 7880 / 9220, total loss: 0.1004, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0011, loss_cls: 0.0006, loss_box: 0.0985, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ012907.1+110753_infraredctmask, 0.2219
+iter: 7890 / 9220, total loss: 0.0275, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0089, loss_box: 0.0181, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7900 / 9220, total loss: 0.0388, rpn_loss_cls: 0.0015, rpn_loss_box: 0.0011, loss_cls: 0.0235, loss_box: 0.0127, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ131150.7+510004_infraredctmask, 0.3351
+Culprit found FIRSTJ143428.3+042141_infraredctmask, 0.2472
+iter: 7910 / 9220, total loss: 0.4284, rpn_loss_cls: 0.0028, rpn_loss_box: 0.0036, loss_cls: 0.3698, loss_box: 0.0522, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ140254.3+163956_infraredctmask, 0.4284
+Culprit found FIRSTJ133437.7+253724_infraredctmask, 0.2302
+iter: 7920 / 9220, total loss: 0.0123, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0016, loss_box: 0.0106, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7930 / 9220, total loss: 0.0856, rpn_loss_cls: 0.0204, rpn_loss_box: 0.0002, loss_cls: 0.0364, loss_box: 0.0287, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ134944.1+105835_infraredctmask, 0.3497
+Culprit found FIRSTJ160957.3+433458_infraredctmask, 0.3613
+iter: 7940 / 9220, total loss: 0.1087, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0054, loss_cls: 0.0866, loss_box: 0.0166, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102706.6+511718_infraredctmask, 0.5710
+Culprit found FIRSTJ114254.1+110133_infraredctmask, 0.8061
+Culprit found FIRSTJ080444.9+450605_infraredctmask, 0.2512
+iter: 7950 / 9220, total loss: 0.0965, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0008, loss_cls: 0.0616, loss_box: 0.0305, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102211.7+174659_infraredctmask, 0.3236
+iter: 7960 / 9220, total loss: 0.1057, rpn_loss_cls: 0.0095, rpn_loss_box: 0.0009, loss_cls: 0.0464, loss_box: 0.0489, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ143628.8+304031_infraredctmask, 0.3647
+iter: 7970 / 9220, total loss: 0.0950, rpn_loss_cls: 0.0172, rpn_loss_box: 0.0160, loss_cls: 0.0437, loss_box: 0.0181, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ163351.3+143222_infraredctmask, 0.2036
+iter: 7980 / 9220, total loss: 0.0915, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0035, loss_cls: 0.0359, loss_box: 0.0519, lr: 0.001000
+speed: 0.106s / iter.
+iter: 7990 / 9220, total loss: 0.0546, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0008, loss_cls: 0.0394, loss_box: 0.0142, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ120705.4+015505_infraredctmask, 0.5719
+iter: 8000 / 9220, total loss: 0.0424, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0007, loss_cls: 0.0107, loss_box: 0.0307, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8010 / 9220, total loss: 0.0544, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0213, loss_box: 0.0326, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8020 / 9220, total loss: 0.1434, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0001, loss_cls: 0.0948, loss_box: 0.0483, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ092812.3+560137_infraredctmask, 0.6261
+iter: 8030 / 9220, total loss: 0.0396, rpn_loss_cls: 0.0040, rpn_loss_box: 0.0014, loss_cls: 0.0036, loss_box: 0.0306, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8040 / 9220, total loss: 0.1675, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0015, loss_cls: 0.0817, loss_box: 0.0842, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8050 / 9220, total loss: 0.0297, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0005, loss_cls: 0.0174, loss_box: 0.0109, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ164138.4+175750_infraredctmask, 0.5718
+Culprit found FIRSTJ140138.7+175010_infraredctmask, 0.2930
+iter: 8060 / 9220, total loss: 0.0194, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0153, loss_box: 0.0040, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ152151.5+381059_infraredctmask, 0.2638
+iter: 8070 / 9220, total loss: 0.1870, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0007, loss_cls: 0.1598, loss_box: 0.0262, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ164415.2+260834_infraredctmask, 0.2751
+Culprit found FIRSTJ102211.7+174659_infraredctmask, 0.2151
+iter: 8080 / 9220, total loss: 0.0423, rpn_loss_cls: 0.0023, rpn_loss_box: 0.0022, loss_cls: 0.0173, loss_box: 0.0205, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ132017.9+562050_infraredctmask, 0.3759
+Culprit found FIRSTJ083220.2+382117_infraredctmask, 0.2922
+iter: 8090 / 9220, total loss: 0.3663, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0004, loss_cls: 0.3042, loss_box: 0.0613, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ125639.3+060908_infraredctmask, 0.3663
+iter: 8100 / 9220, total loss: 0.0660, rpn_loss_cls: 0.0039, rpn_loss_box: 0.0017, loss_cls: 0.0041, loss_box: 0.0564, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ093601.5+341649_infraredctmask, 0.2760
+iter: 8110 / 9220, total loss: 0.0743, rpn_loss_cls: 0.0024, rpn_loss_box: 0.0004, loss_cls: 0.0564, loss_box: 0.0152, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ121311.8+141346_infraredctmask, 0.2134
+iter: 8120 / 9220, total loss: 0.0595, rpn_loss_cls: 0.0234, rpn_loss_box: 0.0003, loss_cls: 0.0242, loss_box: 0.0117, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ223012.6+044803_infraredctmask, 0.2995
+Culprit found FIRSTJ091637.1+220759_infraredctmask, 0.2191
+iter: 8130 / 9220, total loss: 0.4544, rpn_loss_cls: 0.0850, rpn_loss_box: 0.0067, loss_cls: 0.2881, loss_box: 0.0746, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ001511.7+112526_infraredctmask, 0.4544
+Culprit found FIRSTJ221945.3+061959_infraredctmask, 0.3042
+iter: 8140 / 9220, total loss: 0.1022, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0017, loss_cls: 0.0542, loss_box: 0.0460, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ084850.3+490213_infraredctmask, 0.2612
+Culprit found FIRSTJ170053.4+253824_infraredctmask, 0.5481
+Culprit found FIRSTJ114802.1+380919_infraredctmask, 0.3976
+Culprit found FIRSTJ163704.8+413015_infraredctmask, 0.2178
+iter: 8150 / 9220, total loss: 0.0377, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0070, loss_cls: 0.0107, loss_box: 0.0190, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ100111.4+550838_infraredctmask, 0.3866
+Culprit found FIRSTJ103708.9+212241_infraredctmask, 0.2363
+iter: 8160 / 9220, total loss: 0.4360, rpn_loss_cls: 0.0812, rpn_loss_box: 0.0531, loss_cls: 0.2496, loss_box: 0.0521, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ162730.8+274204_infraredctmask, 0.4360
+Culprit found FIRSTJ090907.3+335112_infraredctmask, 0.2103
+iter: 8170 / 9220, total loss: 0.2289, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0004, loss_cls: 0.2089, loss_box: 0.0193, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ215632.2+103349_infraredctmask, 0.2289
+Culprit found FIRSTJ092249.2+390001_infraredctmask, 0.2631
+iter: 8180 / 9220, total loss: 0.1916, rpn_loss_cls: 0.0026, rpn_loss_box: 0.0001, loss_cls: 0.1582, loss_box: 0.0307, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ163726.9+105853_infraredctmask, 0.2465
+iter: 8190 / 9220, total loss: 0.1883, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0018, loss_cls: 0.1653, loss_box: 0.0211, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ120239.4+334117_infraredctmask, 0.2924
+Culprit found FIRSTJ152007.8+144809_infraredctmask, 0.2187
+iter: 8200 / 9220, total loss: 0.1428, rpn_loss_cls: 0.0163, rpn_loss_box: 0.0076, loss_cls: 0.0624, loss_box: 0.0565, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8210 / 9220, total loss: 0.2295, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0029, loss_cls: 0.2056, loss_box: 0.0194, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102909.4+603438_infraredctmask, 0.2295
+Culprit found FIRSTJ162918.7+133823_infraredctmask, 0.2323
+iter: 8220 / 9220, total loss: 0.4062, rpn_loss_cls: 0.0947, rpn_loss_box: 0.0024, loss_cls: 0.2264, loss_box: 0.0827, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ160423.1+372958_infraredctmask, 0.4062
+Culprit found FIRSTJ154713.9+203424_infraredctmask, 0.2291
+Culprit found FIRSTJ122207.4+205930_infraredctmask, 0.2589
+Culprit found FIRSTJ144732.0+072507_infraredctmask, 0.2057
+iter: 8230 / 9220, total loss: 0.2092, rpn_loss_cls: 0.0179, rpn_loss_box: 0.0020, loss_cls: 0.1631, loss_box: 0.0261, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ174254.9+572658_infraredctmask, 0.2092
+Culprit found FIRSTJ143533.7+621425_infraredctmask, 0.2228
+Culprit found FIRSTJ004908.1+045714_infraredctmask, 0.2891
+iter: 8240 / 9220, total loss: 0.3245, rpn_loss_cls: 0.0105, rpn_loss_box: 0.0038, loss_cls: 0.2697, loss_box: 0.0405, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ130328.1+475424_infraredctmask, 0.3245
+Culprit found FIRSTJ163813.2+245706_infraredctmask, 0.2548
+Culprit found FIRSTJ112638.9+072935_infraredctmask, 0.3312
+Culprit found FIRSTJ162740.2+615430_infraredctmask, 0.3952
+iter: 8250 / 9220, total loss: 0.1571, rpn_loss_cls: 0.0171, rpn_loss_box: 0.0069, loss_cls: 0.0995, loss_box: 0.0335, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ133608.5+292643_infraredctmask, 0.5191
+iter: 8260 / 9220, total loss: 0.1941, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0010, loss_cls: 0.1301, loss_box: 0.0630, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ114013.6+321126_infraredctmask, 0.3169
+Culprit found FIRSTJ093619.1+493634_infraredctmask, 0.3417
+iter: 8270 / 9220, total loss: 0.1352, rpn_loss_cls: 0.0129, rpn_loss_box: 0.0043, loss_cls: 0.0697, loss_box: 0.0483, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ132515.3+582202_infraredctmask, 0.2803
+iter: 8280 / 9220, total loss: 0.2955, rpn_loss_cls: 0.0004, rpn_loss_box: 0.0007, loss_cls: 0.2524, loss_box: 0.0420, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ104109.2+161705_infraredctmask, 0.2955
+Culprit found FIRSTJ162558.2+395929_infraredctmask, 0.3661
+iter: 8290 / 9220, total loss: 0.0633, rpn_loss_cls: 0.0027, rpn_loss_box: 0.0008, loss_cls: 0.0282, loss_box: 0.0317, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ140104.8+280450_infraredctmask, 0.2631
+Culprit found FIRSTJ121817.9+240015_infraredctmask, 0.2273
+iter: 8300 / 9220, total loss: 0.0085, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0003, loss_cls: 0.0016, loss_box: 0.0066, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ143145.4+083209_infraredctmask, 0.2352
+Culprit found FIRSTJ144454.2+065045_infraredctmask, 0.4714
+Culprit found FIRSTJ093620.3+605531_infraredctmask, 0.2815
+iter: 8310 / 9220, total loss: 0.0517, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0381, loss_box: 0.0134, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ131900.2+161902_infraredctmask, 0.3232
+iter: 8320 / 9220, total loss: 0.0343, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0005, loss_cls: 0.0191, loss_box: 0.0146, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8330 / 9220, total loss: 0.2032, rpn_loss_cls: 0.0099, rpn_loss_box: 0.0211, loss_cls: 0.1452, loss_box: 0.0270, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ070315.9+474427_infraredctmask, 0.2032
+Culprit found FIRSTJ083201.2+395553_infraredctmask, 0.2196
+Culprit found FIRSTJ083749.6+213433_infraredctmask, 0.3428
+iter: 8340 / 9220, total loss: 0.2116, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0057, loss_cls: 0.1598, loss_box: 0.0443, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ125147.0+110218_infraredctmask, 0.2116
+Culprit found FIRSTJ163246.0+265924_infraredctmask, 0.2668
+Culprit found FIRSTJ165530.8+411730_infraredctmask, 0.2539
+Culprit found FIRSTJ222847.9+142848_infraredctmask, 0.2505
+Culprit found FIRSTJ163536.0+324702_infraredctmask, 0.2230
+iter: 8350 / 9220, total loss: 0.0772, rpn_loss_cls: 0.0013, rpn_loss_box: 0.0003, loss_cls: 0.0297, loss_box: 0.0460, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ113147.7+354924_infraredctmask, 0.2220
+iter: 8360 / 9220, total loss: 0.0768, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0004, loss_cls: 0.0628, loss_box: 0.0128, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ122134.3+473307_infraredctmask, 0.2076
+iter: 8370 / 9220, total loss: 0.0899, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0008, loss_cls: 0.0603, loss_box: 0.0278, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8380 / 9220, total loss: 0.2030, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0014, loss_cls: 0.1533, loss_box: 0.0473, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ110049.6+613113_infraredctmask, 0.2030
+Culprit found FIRSTJ133437.6+253434_infraredctmask, 0.2704
+Culprit found FIRSTJ233644.0+054357_infraredctmask, 0.2512
+Culprit found FIRSTJ095115.6+323937_infraredctmask, 0.3271
+iter: 8390 / 9220, total loss: 0.1652, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0011, loss_cls: 0.1184, loss_box: 0.0456, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8400 / 9220, total loss: 0.1369, rpn_loss_cls: 0.0084, rpn_loss_box: 0.0038, loss_cls: 0.0826, loss_box: 0.0421, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ165413.5+430932_infraredctmask, 0.4009
+iter: 8410 / 9220, total loss: 0.3402, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.3170, loss_box: 0.0230, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ210124.0+091325_infraredctmask, 0.3402
+iter: 8420 / 9220, total loss: 0.0831, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0002, loss_cls: 0.0666, loss_box: 0.0162, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ094215.3+062820_infraredctmask, 0.2856
+iter: 8430 / 9220, total loss: 0.0122, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0006, loss_cls: 0.0020, loss_box: 0.0094, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ151214.7+151455_infraredctmask, 0.5723
+Culprit found FIRSTJ130551.7+394143_infraredctmask, 0.2077
+iter: 8440 / 9220, total loss: 0.1196, rpn_loss_cls: 0.0036, rpn_loss_box: 0.0026, loss_cls: 0.0613, loss_box: 0.0521, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ102354.4+022237_infraredctmask, 0.2144
+Culprit found FIRSTJ085728.2+075258_infraredctmask, 0.2985
+iter: 8450 / 9220, total loss: 0.2135, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.1981, loss_box: 0.0152, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ170733.3+441708_infraredctmask, 0.2135
+Culprit found FIRSTJ080838.2+170729_infraredctmask, 0.2919
+Culprit found FIRSTJ154455.1+102619_infraredctmask, 0.3837
+Culprit found FIRSTJ133437.6+253434_infraredctmask, 0.2853
+iter: 8460 / 9220, total loss: 0.2379, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0012, loss_cls: 0.1914, loss_box: 0.0449, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ113136.9+144244_infraredctmask, 0.2379
+Culprit found FIRSTJ063553.6+311432_infraredctmask, 0.3075
+Culprit found FIRSTJ125418.0+041716_infraredctmask, 0.3283
+iter: 8470 / 9220, total loss: 0.1046, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0005, loss_cls: 0.0765, loss_box: 0.0270, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ132147.2+430633_infraredctmask, 0.2057
+Culprit found FIRSTJ171009.9+500256_infraredctmask, 0.2415
+iter: 8480 / 9220, total loss: 0.0304, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0000, loss_cls: 0.0235, loss_box: 0.0068, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ143210.6+052549_infraredctmask, 0.2566
+iter: 8490 / 9220, total loss: 0.0701, rpn_loss_cls: 0.0063, rpn_loss_box: 0.0013, loss_cls: 0.0470, loss_box: 0.0154, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8500 / 9220, total loss: 0.0523, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0007, loss_cls: 0.0239, loss_box: 0.0276, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ092329.4+043819_infraredctmask, 0.2136
+Culprit found FIRSTJ121510.5+462724_infraredctmask, 0.3683
+iter: 8510 / 9220, total loss: 0.0883, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0013, loss_cls: 0.0383, loss_box: 0.0473, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ133632.7+161053_infraredctmask, 0.2069
+Culprit found FIRSTJ073848.7+471930_infraredctmask, 0.2048
+iter: 8520 / 9220, total loss: 0.0559, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0022, loss_cls: 0.0450, loss_box: 0.0083, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ155538.9+144437_infraredctmask, 0.2206
+Culprit found FIRSTJ154336.6+465957_infraredctmask, 0.5262
+iter: 8530 / 9220, total loss: 0.0460, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0046, loss_box: 0.0412, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ011635.3+050154_infraredctmask, 0.2110
+Culprit found FIRSTJ110049.6+613113_infraredctmask, 0.3333
+Culprit found FIRSTJ101541.6+594443_infraredctmask, 0.2151
+iter: 8540 / 9220, total loss: 0.1457, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0009, loss_cls: 0.1125, loss_box: 0.0287, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112025.7+425258_infraredctmask, 0.2781
+Culprit found FIRSTJ160813.7+292126_infraredctmask, 0.3416
+iter: 8550 / 9220, total loss: 0.0178, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0115, loss_box: 0.0061, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ101300.4+105408_infraredctmask, 0.2511
+Culprit found FIRSTJ124137.6+585416_infraredctmask, 0.2566
+iter: 8560 / 9220, total loss: 0.1099, rpn_loss_cls: 0.0133, rpn_loss_box: 0.0195, loss_cls: 0.0417, loss_box: 0.0354, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ073951.9+403218_infraredctmask, 0.2331
+iter: 8570 / 9220, total loss: 0.3440, rpn_loss_cls: 0.0203, rpn_loss_box: 0.0023, loss_cls: 0.2887, loss_box: 0.0327, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ121600.1+162306_infraredctmask, 0.3440
+Culprit found FIRSTJ144923.8+221237_infraredctmask, 0.2355
+Culprit found FIRSTJ132141.5+410259_infraredctmask, 0.2055
+iter: 8580 / 9220, total loss: 0.1374, rpn_loss_cls: 0.0010, rpn_loss_box: 0.0015, loss_cls: 0.0922, loss_box: 0.0427, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8590 / 9220, total loss: 0.0480, rpn_loss_cls: 0.0035, rpn_loss_box: 0.0007, loss_cls: 0.0276, loss_box: 0.0161, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8600 / 9220, total loss: 0.0595, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0004, loss_cls: 0.0149, loss_box: 0.0439, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ130717.5+462945_infraredctmask, 0.2508
+Culprit found FIRSTJ124209.2+092845_infraredctmask, 0.2657
+Culprit found FIRSTJ110900.2+230409_infraredctmask, 0.3482
+iter: 8610 / 9220, total loss: 0.0149, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0004, loss_cls: 0.0009, loss_box: 0.0136, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8620 / 9220, total loss: 0.0618, rpn_loss_cls: 0.0091, rpn_loss_box: 0.0014, loss_cls: 0.0211, loss_box: 0.0302, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8630 / 9220, total loss: 0.0355, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0000, loss_cls: 0.0214, loss_box: 0.0138, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ125556.5+355636_infraredctmask, 0.4851
+iter: 8640 / 9220, total loss: 0.2504, rpn_loss_cls: 0.0058, rpn_loss_box: 0.0012, loss_cls: 0.2168, loss_box: 0.0267, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ160044.5+191220_infraredctmask, 0.2504
+Culprit found FIRSTJ082017.8+363012_infraredctmask, 0.2357
+Culprit found FIRSTJ121233.5+272248_infraredctmask, 0.3550
+iter: 8650 / 9220, total loss: 0.0768, rpn_loss_cls: 0.0025, rpn_loss_box: 0.0000, loss_cls: 0.0103, loss_box: 0.0639, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8660 / 9220, total loss: 0.0196, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0002, loss_cls: 0.0054, loss_box: 0.0139, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ164138.4+175750_infraredctmask, 0.4293
+Culprit found FIRSTJ131757.3+314459_infraredctmask, 0.3889
+iter: 8670 / 9220, total loss: 0.1743, rpn_loss_cls: 0.0101, rpn_loss_box: 0.0137, loss_cls: 0.1101, loss_box: 0.0404, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ130550.2+242801_infraredctmask, 0.2053
+iter: 8680 / 9220, total loss: 0.0870, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0004, loss_cls: 0.0337, loss_box: 0.0524, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ163308.6+551334_infraredctmask, 0.3360
+Culprit found FIRSTJ173050.0+503154_infraredctmask, 0.2942
+Culprit found FIRSTJ163726.9+105853_infraredctmask, 0.2021
+iter: 8690 / 9220, total loss: 0.0182, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0046, loss_box: 0.0130, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ115417.6+161138_infraredctmask, 0.3873
+iter: 8700 / 9220, total loss: 0.1760, rpn_loss_cls: 0.0011, rpn_loss_box: 0.0002, loss_cls: 0.1236, loss_box: 0.0512, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ081357.1+205801_infraredctmask, 0.2194
+iter: 8710 / 9220, total loss: 0.1293, rpn_loss_cls: 0.0016, rpn_loss_box: 0.0014, loss_cls: 0.1139, loss_box: 0.0125, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8720 / 9220, total loss: 0.1155, rpn_loss_cls: 0.0008, rpn_loss_box: 0.0032, loss_cls: 0.0440, loss_box: 0.0675, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8730 / 9220, total loss: 0.1680, rpn_loss_cls: 0.0034, rpn_loss_box: 0.0010, loss_cls: 0.0913, loss_box: 0.0723, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ150331.4+521444_infraredctmask, 0.2462
+iter: 8740 / 9220, total loss: 0.0484, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0033, loss_cls: 0.0323, loss_box: 0.0125, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ161911.3+080019_infraredctmask, 0.4941
+Culprit found FIRSTJ104706.6+214700_infraredctmask, 0.2056
+iter: 8750 / 9220, total loss: 0.0875, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0480, loss_box: 0.0394, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ004012.8+075811_infraredctmask, 0.4731
+iter: 8760 / 9220, total loss: 0.0795, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0003, loss_cls: 0.0373, loss_box: 0.0411, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ084349.2+194942_infraredctmask, 0.2074
+iter: 8770 / 9220, total loss: 0.2459, rpn_loss_cls: 0.0051, rpn_loss_box: 0.0067, loss_cls: 0.1627, loss_box: 0.0715, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ134320.7+564410_infraredctmask, 0.2459
+Culprit found FIRSTJ164107.9+250531_infraredctmask, 0.3245
+Culprit found FIRSTJ085242.7+055449_infraredctmask, 0.2174
+iter: 8780 / 9220, total loss: 0.0749, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0388, loss_box: 0.0359, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8790 / 9220, total loss: 0.1320, rpn_loss_cls: 0.0018, rpn_loss_box: 0.0015, loss_cls: 0.1107, loss_box: 0.0181, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ121745.7+561748_infraredctmask, 0.2932
+Culprit found FIRSTJ214929.9+110233_infraredctmask, 0.2394
+iter: 8800 / 9220, total loss: 0.0663, rpn_loss_cls: 0.0082, rpn_loss_box: 0.0002, loss_cls: 0.0305, loss_box: 0.0274, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ171038.8+423945_infraredctmask, 0.5921
+iter: 8810 / 9220, total loss: 0.0577, rpn_loss_cls: 0.0021, rpn_loss_box: 0.0003, loss_cls: 0.0312, loss_box: 0.0241, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ133254.4+031808_infraredctmask, 0.2768
+Culprit found FIRSTJ074023.8+242901_infraredctmask, 0.3112
+iter: 8820 / 9220, total loss: 0.1068, rpn_loss_cls: 0.0024, rpn_loss_box: 0.0007, loss_cls: 0.0926, loss_box: 0.0111, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ110554.2+334059_infraredctmask, 0.2343
+Culprit found FIRSTJ134722.4+380017_infraredctmask, 0.3316
+iter: 8830 / 9220, total loss: 0.0303, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0005, loss_cls: 0.0005, loss_box: 0.0293, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ135306.4+434958_infraredctmask, 0.2258
+iter: 8840 / 9220, total loss: 0.0649, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0528, loss_box: 0.0119, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ152126.3+243539_infraredctmask, 0.2993
+iter: 8850 / 9220, total loss: 0.0438, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0047, loss_cls: 0.0085, loss_box: 0.0300, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8860 / 9220, total loss: 0.0440, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0054, loss_cls: 0.0090, loss_box: 0.0288, lr: 0.001000
+speed: 0.106s / iter.
+iter: 8870 / 9220, total loss: 0.2094, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0017, loss_cls: 0.1866, loss_box: 0.0193, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ162720.3+064717_infraredctmask, 0.2094
+iter: 8880 / 9220, total loss: 0.0255, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0001, loss_cls: 0.0114, loss_box: 0.0139, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ095842.1+130145_infraredctmask, 0.2046
+iter: 8890 / 9220, total loss: 0.0630, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0002, loss_cls: 0.0324, loss_box: 0.0303, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112004.9+460746_infraredctmask, 0.2923
+Culprit found FIRSTJ073816.5+593646_infraredctmask, 0.2802
+iter: 8900 / 9220, total loss: 0.0326, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0007, loss_cls: 0.0242, loss_box: 0.0070, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ100145.3+585554_infraredctmask, 0.2125
+iter: 8910 / 9220, total loss: 0.0731, rpn_loss_cls: 0.0098, rpn_loss_box: 0.0031, loss_cls: 0.0310, loss_box: 0.0292, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ003536.0+075431_infraredctmask, 0.2550
+iter: 8920 / 9220, total loss: 0.1841, rpn_loss_cls: 0.0056, rpn_loss_box: 0.0078, loss_cls: 0.0957, loss_box: 0.0750, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112011.7+193907_infraredctmask, 0.2288
+iter: 8930 / 9220, total loss: 0.1202, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0062, loss_cls: 0.0553, loss_box: 0.0584, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ122415.4+073634_infraredctmask, 0.3786
+Culprit found FIRSTJ084329.7+233130_infraredctmask, 0.2328
+Culprit found FIRSTJ125308.1+194219_infraredctmask, 0.4220
+iter: 8940 / 9220, total loss: 0.0308, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0003, loss_cls: 0.0213, loss_box: 0.0092, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ081602.8+380420_infraredctmask, 0.2908
+iter: 8950 / 9220, total loss: 0.1239, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0008, loss_cls: 0.0418, loss_box: 0.0809, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ215526.6+122830_infraredctmask, 0.3304
+iter: 8960 / 9220, total loss: 0.0798, rpn_loss_cls: 0.0014, rpn_loss_box: 0.0028, loss_cls: 0.0361, loss_box: 0.0395, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ093654.7+541031_infraredctmask, 0.5099
+Culprit found FIRSTJ111526.0+153010_infraredctmask, 0.3291
+iter: 8970 / 9220, total loss: 0.2100, rpn_loss_cls: 0.0020, rpn_loss_box: 0.0046, loss_cls: 0.1475, loss_box: 0.0559, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ091923.5+504906_infraredctmask, 0.2100
+iter: 8980 / 9220, total loss: 0.0898, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0002, loss_cls: 0.0115, loss_box: 0.0778, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ154147.5+375508_infraredctmask, 0.3294
+Culprit found FIRSTJ132403.2+433443_infraredctmask, 0.2561
+iter: 8990 / 9220, total loss: 0.1491, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0051, loss_cls: 0.0477, loss_box: 0.0957, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ104844.2+394841_infraredctmask, 0.2047
+Culprit found FIRSTJ124619.9+244733_infraredctmask, 0.2316
+Culprit found FIRSTJ075504.5+564347_infraredctmask, 0.2995
+iter: 9000 / 9220, total loss: 0.2288, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0013, loss_cls: 0.1965, loss_box: 0.0310, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ005027.7+113954_infraredctmask, 0.2288
+iter: 9010 / 9220, total loss: 0.0513, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0261, loss_box: 0.0250, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9020 / 9220, total loss: 0.1724, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0011, loss_cls: 0.0918, loss_box: 0.0792, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9030 / 9220, total loss: 0.1542, rpn_loss_cls: 0.0009, rpn_loss_box: 0.0052, loss_cls: 0.0929, loss_box: 0.0552, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ105809.6+150051_infraredctmask, 0.4649
+Culprit found FIRSTJ170954.3+233527_infraredctmask, 0.3695
+Culprit found FIRSTJ014746.6+121806_infraredctmask, 0.2089
+iter: 9040 / 9220, total loss: 0.0841, rpn_loss_cls: 0.0255, rpn_loss_box: 0.0109, loss_cls: 0.0134, loss_box: 0.0343, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9050 / 9220, total loss: 0.0268, rpn_loss_cls: 0.0060, rpn_loss_box: 0.0019, loss_cls: 0.0129, loss_box: 0.0060, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9060 / 9220, total loss: 0.0779, rpn_loss_cls: 0.0003, rpn_loss_box: 0.0007, loss_cls: 0.0503, loss_box: 0.0266, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ093620.3+605531_infraredctmask, 0.2364
+Culprit found FIRSTJ091528.8+501136_infraredctmask, 0.3008
+iter: 9070 / 9220, total loss: 0.1003, rpn_loss_cls: 0.0006, rpn_loss_box: 0.0002, loss_cls: 0.0867, loss_box: 0.0129, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ135429.8+401240_infraredctmask, 0.2163
+iter: 9080 / 9220, total loss: 0.0488, rpn_loss_cls: 0.0027, rpn_loss_box: 0.0000, loss_cls: 0.0042, loss_box: 0.0419, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ151335.9+142153_infraredctmask, 0.2663
+Culprit found FIRSTJ170542.4+253531_infraredctmask, 0.2207
+iter: 9090 / 9220, total loss: 0.0925, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0020, loss_cls: 0.0094, loss_box: 0.0810, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9100 / 9220, total loss: 0.0278, rpn_loss_cls: 0.0000, rpn_loss_box: 0.0018, loss_cls: 0.0185, loss_box: 0.0075, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112110.7+071743_infraredctmask, 0.2567
+Culprit found FIRSTJ172643.4+470800_infraredctmask, 0.5361
+Culprit found FIRSTJ121820.9+495452_infraredctmask, 0.5711
+iter: 9110 / 9220, total loss: 0.0457, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0029, loss_cls: 0.0317, loss_box: 0.0110, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ112948.7+283312_infraredctmask, 0.2816
+Culprit found FIRSTJ114342.9+513424_infraredctmask, 0.3526
+iter: 9120 / 9220, total loss: 0.0400, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0017, loss_cls: 0.0209, loss_box: 0.0172, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ083808.5+163409_infraredctmask, 0.5234
+iter: 9130 / 9220, total loss: 0.0762, rpn_loss_cls: 0.0066, rpn_loss_box: 0.0005, loss_cls: 0.0389, loss_box: 0.0301, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ115004.8+322904_infraredctmask, 0.2480
+Culprit found FIRSTJ151219.2+161109_infraredctmask, 0.2262
+iter: 9140 / 9220, total loss: 0.1130, rpn_loss_cls: 0.0129, rpn_loss_box: 0.0011, loss_cls: 0.0537, loss_box: 0.0454, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ082628.8+101823_infraredctmask, 0.2048
+iter: 9150 / 9220, total loss: 0.1519, rpn_loss_cls: 0.0115, rpn_loss_box: 0.0049, loss_cls: 0.1101, loss_box: 0.0253, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9160 / 9220, total loss: 0.2001, rpn_loss_cls: 0.0007, rpn_loss_box: 0.0003, loss_cls: 0.1654, loss_box: 0.0337, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ152925.6+124802_infraredctmask, 0.2001
+Culprit found FIRSTJ075149.9+555503_infraredctmask, 0.2573
+Culprit found FIRSTJ081652.6+413324_infraredctmask, 0.2375
+Culprit found FIRSTJ143658.6+235147_infraredctmask, 0.3403
+iter: 9170 / 9220, total loss: 0.1533, rpn_loss_cls: 0.0002, rpn_loss_box: 0.0007, loss_cls: 0.1299, loss_box: 0.0224, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ110013.8+172107_infraredctmask, 0.2338
+Culprit found FIRSTJ001218.8+120734_infrare2018-10-05 11:25:53.616597: W tensorflow/core/framework/op_kernel.cc:1192] Resource exhausted: /home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023_val/VGGnet_fast_rcnn-9220.data-00000-of-00001.tempstate4339927480093052163; Disk quota exceeded
+dctmask, 0.2040
+iter: 9180 / 9220, total loss: 0.0658, rpn_loss_cls: 0.0072, rpn_loss_box: 0.0003, loss_cls: 0.0259, loss_box: 0.0324, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9190 / 9220, total loss: 0.0191, rpn_loss_cls: 0.0001, rpn_loss_box: 0.0001, loss_cls: 0.0078, loss_box: 0.0111, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ101728.2+090618_infraredctmask, 0.3522
+Culprit found FIRSTJ162234.6+555416_infraredctmask, 0.2463
+Culprit found FIRSTJ080647.6+230527_infraredctmask, 0.2029
+iter: 9200 / 9220, total loss: 0.0291, rpn_loss_cls: 0.0005, rpn_loss_box: 0.0005, loss_cls: 0.0175, loss_box: 0.0106, lr: 0.001000
+speed: 0.106s / iter.
+iter: 9210 / 9220, total loss: 0.1358, rpn_loss_cls: 0.0097, rpn_loss_box: 0.0048, loss_cls: 0.0747, loss_box: 0.0466, lr: 0.001000
+speed: 0.106s / iter.
+Culprit found FIRSTJ152757.0+531712_infraredctmask, 0.2884
+iter: 9220 / 9220, total loss: 0.1055, rpn_loss_cls: 0.0061, rpn_loss_box: 0.0002, loss_cls: 0.0813, loss_box: 0.0179, lr: 0.001000
+speed: 0.106s / iter.
+Traceback (most recent call last):
+  File "/home/yuno/intern/rgz_rcnn/tools/train_net.py", line 105, in <module>
+    max_iters=args.max_iters, start_iter=args.start_iter)
+  File "/home/yuno/intern/rgz_rcnn/tools/../lib/fast_rcnn/train.py", line 331, in train_net
+    sw.train_model(sess, max_iters, start_iter=start_iter)
+  File "/home/yuno/intern/rgz_rcnn/tools/../lib/fast_rcnn/train.py", line 263, in train_model
+    self.snapshot(sess, iter)
+  File "/home/yuno/intern/rgz_rcnn/tools/../lib/fast_rcnn/train.py", line 81, in snapshot
+    global_step=iter_num + 1)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1573, in save
+    {self.saver_def.filename_tensor_name: checkpoint_file})
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 889, in run
+    run_metadata_ptr)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1336, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: /home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023_val/VGGnet_fast_rcnn-9220.data-00000-of-00001.tempstate4339927480093052163; Disk quota exceeded
+	 [[Node: save/SaveV2 = SaveV2[dtypes=[DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT], _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_save/Const_0_0, save/SaveV2/tensor_names, save/SaveV2/shape_and_slices, Variable/_249, bbox_pred/biases/_251, bbox_pred/weights/_253, cls_score/biases/_255, cls_score/weights/_257, conv1_1/biases/_259, conv1_1/weights/_261, conv1_2/biases/_263, conv1_2/weights/_265, conv2_1/biases/_267, conv2_1/weights/_269, conv2_2/biases/_271, conv2_2/weights/_273, conv3_1/biases/_275, conv3_1/weights/_277, conv3_2/biases/_279, conv3_2/weights/_281, conv3_3/biases/_283, conv3_3/weights/_285, conv4_1/biases/_287, conv4_1/weights/_289, conv4_2/biases/_291, conv4_2/weights/_293, conv4_3/biases/_295, conv4_3/weights/_297, conv5_1/biases/_299, conv5_1/weights/_301, conv5_2/biases/_303, conv5_2/weights/_305, conv5_3/biases/_307, conv5_3/weights/_309, fc6/biases/_311, fc6/weights/_313, fc7/biases/_315, fc7/weights/_317, rpn_bbox_pred/biases/_319, rpn_bbox_pred/weights/_321, rpn_cls_score/biases/_323, rpn_cls_score/weights/_325, rpn_conv/3x3/biases/_327, rpn_conv/3x3/weights/_329)]]
+
+Caused by op u'save/SaveV2', defined at:
+  File "/home/yuno/intern/rgz_rcnn/tools/train_net.py", line 105, in <module>
+    max_iters=args.max_iters, start_iter=args.start_iter)
+  File "/home/yuno/intern/rgz_rcnn/tools/../lib/fast_rcnn/train.py", line 325, in train_net
+    saver = tf.train.Saver(max_to_keep=100)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1218, in __init__
+    self.build()
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1227, in build
+    self._build(self._filename, build_save=True, build_restore=True)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1263, in _build
+    build_save=build_save, build_restore=build_restore)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 748, in _build_internal
+    save_tensor = self._AddSaveOps(filename_tensor, saveables)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 296, in _AddSaveOps
+    save = self.save_op(filename_tensor, saveables)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 239, in save_op
+    tensors)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/gen_io_ops.py", line 1163, in save_v2
+    shape_and_slices=shape_and_slices, tensors=tensors, name=name)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+ResourceExhaustedError (see above for traceback): /home/yuno/intern/rgz_rcnn/output/faster_rcnn_end2end/rgz_2017_lc_D4_1023_val/VGGnet_fast_rcnn-9220.data-00000-of-00001.tempstate4339927480093052163; Disk quota exceeded
+	 [[Node: save/SaveV2 = SaveV2[dtypes=[DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT, DT_FLOAT], _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_save/Const_0_0, save/SaveV2/tensor_names, save/SaveV2/shape_and_slices, Variable/_249, bbox_pred/biases/_251, bbox_pred/weights/_253, cls_score/biases/_255, cls_score/weights/_257, conv1_1/biases/_259, conv1_1/weights/_261, conv1_2/biases/_263, conv1_2/weights/_265, conv2_1/biases/_267, conv2_1/weights/_269, conv2_2/biases/_271, conv2_2/weights/_273, conv3_1/biases/_275, conv3_1/weights/_277, conv3_2/biases/_279, conv3_2/weights/_281, conv3_3/biases/_283, conv3_3/weights/_285, conv4_1/biases/_287, conv4_1/weights/_289, conv4_2/biases/_291, conv4_2/weights/_293, conv4_3/biases/_295, conv4_3/weights/_297, conv5_1/biases/_299, conv5_1/weights/_301, conv5_2/biases/_303, conv5_2/weights/_305, conv5_3/biases/_307, conv5_3/weights/_309, fc6/biases/_311, fc6/weights/_313, fc7/biases/_315, fc7/weights/_317, rpn_bbox_pred/biases/_319, rpn_bbox_pred/weights/_321, rpn_cls_score/biases/_323, rpn_cls_score/weights/_325, rpn_conv/3x3/biases/_327, rpn_conv/3x3/weights/_329)]]
+
+
+real	17m35.685s
+user	13m19.466s
+sys	2m33.755s
