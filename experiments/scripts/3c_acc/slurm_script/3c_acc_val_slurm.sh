@@ -1,0 +1,9 @@
+sbatch 3c_D1_132_val.sh
+sbatch 3c_D1_264_val.sh
+sbatch 3c_D1_600_val.sh
+sbatch 3c_D3_132_val.sh
+sbatch 3c_D3_264_val.sh
+sbatch 3c_D3_600_val.sh
+sbatch 3c_D4_132_val.sh
+sbatch 3c_D4_264_val.sh
+sbatch 3c_D4_600_val.sh
